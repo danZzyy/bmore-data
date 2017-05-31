@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="data/groc_addr.json"></script>
+    <title></title>
+  </head>
+  <body onload="init()">
+    <div id='data'></div>
+  </body>
+  <script>
+    var geocoder;
+    var geoJSON = { "type": "FeatureCollection", "features": [] };
+    function init(){
+      geocoder = new google.maps.Geocoder();
+      groc.forEach( function(addr){
+        var a_text = addr.address;
+        geocoder.geocode({address: a_text}, function (results, status){
+          if (status == google.maps.GeocoderStatus.OK){
+            console.log(a_text + " : " + results[0].geometry.location.lng() + " , " + results[0].geometry.location.lat());
+            var feature = { "type": "Feature",
+                            "geometry":{
+                              "type": "Point",
+                              "coordinates": [results[0].geometry.location.lng(),results[0].geometry.location.lat()]
+                            },
+                            "properties": {
+                              "name": addr.name,
+                              "address": addr.address,
+                              "store_type": addr.type
+                            }
+                          };
+            geoJSON.features.push(feature);
+            document.getElementById('data').innerHTML = JSON.stringify(geoJSON);
+          }
+          else {
+            console.log("Could not find: " + a_text);
+          }
+        });
+      });
+    }
+
+  </script>
+</html>

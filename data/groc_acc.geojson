@@ -1,0 +1,693 @@
+var groc_geoJSON = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.59321779999999,
+          39.28499679999999
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "SAVE A LOT OF FELLS POINT",
+        "address": "517 BROADWAY Baltimore, MD",
+        "type": "Limited Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.676039,
+          39.3353587
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "ALDI",
+        "address": "3601 COLD SPRING LN Baltimore, MD",
+        "type": "Limited Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.66224569999997,
+          39.2593211
+        ]
+      },
+      "properties": {
+        "accessibility": "NO",
+        "name": "ALDI (A.K.A. 3000 ATCO AVENUE)",
+        "address": "3140 WASHINGTON BLVD Baltimore, MD",
+        "type": "Limited Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.62867310000001,
+          39.3073784
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "SAVE-A-LOT",
+        "address": "250 MCMECHEN st Baltimore, MD",
+        "type": "Limited Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5653648,
+          39.2922588
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "SANTONI'S, INC.",
+        "address": "3800 LOMBARD ST Baltimore, MD",
+        "type": "Small Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6163052,
+          39.3167058
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "SAFEWAY, INC.",
+        "address": "2401 CHARLES ST Baltimore, MD",
+        "type": "Full Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.60490479999999,
+          39.2369072
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "SAVE-ON-FOOD SUPERMARKET",
+        "address": "413 PATAPSCO AVE Baltimore, MD",
+        "type": "Limited Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.53574850000001,
+          39.2892459
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "SHOPPERS FOOD & PHARMACY # 7567",
+        "address": "6500 EASTERN AVE Baltimore, MD",
+        "type": "Full Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.69603239999998,
+          39.2938694
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "GIANT FOOD STORE # 317",
+        "address": "4624 EDMONDSON AVE Baltimore, MD",
+        "type": "Full Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6286409,
+          39.2991588
+        ]
+      },
+      "properties": {
+        "accessibility": "YES",
+        "name": "STOP-SHOP & SAVE",
+        "address": "1101 PENNSYLVANIA AVE Baltimore, MD",
+        "type": "Limited Supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.64818989999998,
+          39.3046138
+        ]
+      },
+      "properties": {
+        "accessibility": "NO",
+        "name": "STOP, SHOP & SAVE",
+        "address": "1400 MONROE ST Baltimore, MD",
+        "type": "Limited Supermarket"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.607801,
+          39.259876
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Limited Supermarket",
+        "name": "SAM'S CLUB # 4771",
+        "address": "2601 PORT COVINGTON dr Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.600977,
+          39.30899
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Limited Supermarket",
+        "name": "STOP-SHOP & SAVE",
+        "address": "1600 HARFORD AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.571709,
+          39.295593
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Limited Supermarket",
+        "name": "ALDI INC.",
+        "address": "3250 E FAYETTE ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.578749,
+          39.280768
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "SAFEWAY   (STORE #1481)",
+        "address": "2610 BOSTON ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.630152,
+          39.336394
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "GIANT FOOD STORE #124",
+        "address": "711 W 40TH ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.635301,
+          39.338374
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "SUPERFRESH",
+        "address": "1020 W 41ST ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.607963,
+          39.328027
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "GIANT FOODS #303",
+        "address": "601 E 33RD ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.568817,
+          39.314349
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Limited Supermarket",
+        "name": "SAVE-A-LOT",
+        "address": "4001 ERDMAN AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.649729,
+          39.368562
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "WHOLE FOODS MARKET",
+        "address": "1330 SMITH AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.58262,
+          39.367276
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "NO",
+        "type": "Small Supermarket",
+        "name": "MARS SUPER MARKETS INC.",
+        "address": "1700 E NORTHERN PKWY Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.596822,
+          39.301518
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Limited Supermarket",
+        "name": "STOP SHOP & SAVE",
+        "address": "929 N CAROLINE ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.666738,
+          39.338994
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Limited Supermarket",
+        "name": "BAINES STOP SHOP & SAVE #04",
+        "address": "2701 W COLD SPRING LN Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.636602,
+          39.285263
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "SAFEWAY STORES INC. #1153",
+        "address": "1205 W PRATT ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.544435,
+          39.323996
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Full Supermarket",
+        "name": "GIANT FOOD STORE #145",
+        "address": "5150 SINCLAIR LN Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.540738,
+          39.347184
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Limited Supermarket",
+        "name": "BI-RITE",
+        "address": "5950 BELAIR RD Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.615717,
+          39.326535
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Small Supermarket",
+        "name": "EDDIE'S SUPERMARKET",
+        "address": "3117 ST PAUL ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.65344,
+          39.282852
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Full Supermarket",
+        "name": "SUPER FRESH FOOD MARKETS #813",
+        "address": "2495 FREDERICK AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.641274,
+          39.248577
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Small Supermarket",
+        "name": "FOOD KING SUPERMARKET",
+        "address": "3400 ANNAPOLIS RD Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.626869,
+          39.282458
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Limited Supermarket",
+        "name": "SAVE-A-LOT",
+        "address": "717 WASHINGTON BLVD Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.700865,
+          39.346055
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Small Supermarket",
+        "name": "FOOD KING SUPERMARKET",
+        "address": "5700 WABASH AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.655361,
+          39.31661
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Limited Supermarket",
+        "name": "STOP SHOP & SAVE",
+        "address": "2301 LIBERTY HEIGHTS AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.67568,
+          39.310033
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Limited Supermarket",
+        "name": "STOP SHOP & SAVE",
+        "address": "3427 CLIFTON AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.709248,
+          39.359575
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Limited Supermarket",
+        "name": "SAVE-A-LOT",
+        "address": "6836 REISTERSTOWN RD Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6185,
+          39.312334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Limited Supermarket",
+        "name": "SAVE-A-LOT",
+        "address": "2008 MARYLAND AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.571214,
+          39.339207
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "SAFEWAY INC. # 1513",
+        "address": "4401 HARFORD RD Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.634212,
+          39.355783
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Small Supermarket",
+        "name": "EDDIE'S SUPER MARKET",
+        "address": "5113 ROLAND AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.591738,
+          39.341198
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "NO",
+        "type": "Limited Supermarket",
+        "name": "SAVE-A-LOT",
+        "address": "1500 HAVENWOOD Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.599596,
+          39.283629
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "WHOLE FOODS MARKET",
+        "address": "1001 FLEET ST Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.582152,
+          39.359302
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "NO",
+        "type": "Small Supermarket",
+        "name": "FOOD KING",
+        "address": "5830 HILLEN RD Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.706998,
+          39.355122
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "SOMEWHAT",
+        "type": "Full Supermarket",
+        "name": "GIANT FOOD # 397",
+        "address": "6620 REISTERSTOWN RD Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.569239,
+          39.291802
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Small Supermarket",
+        "name": "HIGHLANDTOWN  GROCERY  &  DELI",
+        "address": "19 S HIGHLAND AVE Baltimore, MD  "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.600372,
+          39.271692
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "accessibility": "YES",
+        "type": "Full Supermarket",
+        "name": "SHOPPERS",
+        "address": "900 E Fort Ave Baltimore, MD  "
+      }
+    }
+  ]
+}

@@ -52,6 +52,21 @@ p {
 .spacing{
   width: 100px;
 }
+#stats {
+  margin-left: 5%;
+}
+.bigStat {
+  font-size: 2em;
+}
+#yesStat {
+  color: #0d8700;
+}
+#somewhatStat {
+  color: #a88300;
+}
+#noStat {
+  color: #a80101;
+}
 #food-desert {
   width: 600px;
   display: block;

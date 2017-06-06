@@ -30,7 +30,7 @@
         Daniil Zadorozhnyy
       </header>
       <p><b>OVERVIEW</b></p>
-      <p>In this project I will be looking at Baltimore City's geospatial data of bike paths/trails and grocery stores. I will determine what stores are accessible via bicycle and what the proportion is over the whole city. Finally, I will compare this data with the map of Baltimore's known food deserts.</p>
+      <p>In this project I will be looking at Baltimore City's geospatial data of bike paths/trails and grocery stores. I will determine what stores are accessible via bicycle and what the proportion is over the whole city.</p>
       <div id="buttons">
         <button id="toggle" type="button" onclick="toggleMap()">Toggle Map</button>
         <span id="gen">General</span>
@@ -117,6 +117,19 @@
            </td>
          </tr>
        </table>
+     </div>
+     <br>
+     <p>The accessibility values of the stores found in the Accessibility Map were created with a rating system I came up with. </p>
+     <ul>
+       <li>Stores within 1/4 mile of a bike lane will be considered ACCESSIBLE</li>
+       <li>Stores within 1/2 mile of a bike lane are SOMEWHAT ACCESSIBLE</li>
+       <li>Finally, stores further than 1/2 mile from a bike lane are labeled NOT ACCESSIBLE</li>
+     </ul>
+     <p><b>STATISTICS</b></p>
+     <div id="stats">
+       <div id="yesStat"></div>
+       <div id="somewhatStat"></div>
+       <div id="noStat"></div>
      </div>
      <p><b>DATASETS</b></p>
      <ul>

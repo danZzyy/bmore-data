@@ -48,6 +48,11 @@ function init(){
   var accessible = [];
   var somewhatAcccessible = [];
   var notAccessible = [];
+  var yesCount = 0;
+  var somewhatCount = 0;
+  var noCount = 0;
+  var grocTotal = grocLayer.length;
+
   grocLayer.forEach(function(feature){
     // first map
     var popupText = "<b>" + feature.properties.name + "</b><br>" + feature.properties.type + "<br>" + feature.properties.address;
@@ -71,18 +76,24 @@ function init(){
     var accMarker = L.geoJSON(feature, {
       pointToLayer: function (f, latlng) {
         if(feature.properties.accessibility == "YES") {
+          yesCount ++;
           return L.circleMarker(latlng, yesMarkerOptions);
         }
         else if(feature.properties.accessibility == "SOMEWHAT") {
+          somewhatCount++;
           return L.circleMarker(latlng, somewhatMarkerOptions);
         }
         else {
+          noCount ++;
           return L.circleMarker(latlng, noMarkerOptions);
         }
       }
     }).addTo(map2);
 
   });
+  $('#yesStat').html('<div class="bigStat">' + ((yesCount/grocTotal)*100).toFixed(1) + '%</div> of Grocery Stores are ACCESSIBLE');
+  $('#somewhatStat').html('<div class="bigStat">' + ((somewhatCount/grocTotal)*100).toFixed(1) + '%</div> of Grocery Stores are SOMEWHAT ACCESSIBLE');;
+  $('#noStat').html('<div class="bigStat">' + ((noCount/grocTotal)*100).toFixed(1) + '%</div> of Grocery Stores are NOT ACCESSIBLE');;
 
   $('#map2').css('height', '0px');
   $('#accLegend').css('height', '0px');

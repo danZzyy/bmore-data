@@ -1,0 +1,79 @@
+package com.bmore.spring.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.vividsolutions.jts.geom.Point;
+
+@Entity(name="grocery")
+@Table(name="grocery")
+public class Grocery implements geoJSONable, Serializable{
+
+	@Id
+	private int id;
+	
+	private String name;
+	
+	private String address;
+	
+	private String type;
+	
+	private Point coors;
+
+	@Override
+	public String toJSON() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Column(name="id")
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	@Column(name="name")
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Column(name="address")	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	@Column(name="type")
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	@Column(name="coors")
+	public Point getCoors() {
+		return coors;
+	}
+
+	public void setCoors(Point coors) {
+		this.coors = coors;
+	} 
+}

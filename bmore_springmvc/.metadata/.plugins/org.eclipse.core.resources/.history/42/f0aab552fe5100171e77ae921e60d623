@@ -1,0 +1,25 @@
+package com.bmore.spring.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.vividsolutions.jts.geom.Point;
+
+@Entity
+@Table(name="grocery")
+public class Grocery {
+
+	private int id;
+	
+	private String name;
+	
+	private String address;
+	
+	private String store_type;
+	
+	private Point geom;
+}

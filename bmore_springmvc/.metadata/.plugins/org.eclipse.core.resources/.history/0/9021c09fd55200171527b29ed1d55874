@@ -1,0 +1,9 @@
+package com.bmore.spring.model;
+
+public class Accessibility {
+
+	@Id
+	private int id;
+	
+	private String accessibility;
+}

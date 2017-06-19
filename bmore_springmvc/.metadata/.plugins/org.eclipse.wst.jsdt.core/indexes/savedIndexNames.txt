@@ -1,0 +1,6 @@
+INDEX VERSION 1.3+C:\Users\Dan\Desktop\Job Applications\Contrast Security\bmore-data\bmore_springmvc\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4240975564.index
+4119172463.index
+1351087975.index
+2204786786.index
+198277758.index

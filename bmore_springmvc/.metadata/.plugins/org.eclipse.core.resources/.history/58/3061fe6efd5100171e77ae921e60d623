@@ -1,0 +1,11 @@
+package com.bmore.spring.model;
+
+public class FeatureCollection implements geoJSONable {
+
+	@Override
+	public String toJSON() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

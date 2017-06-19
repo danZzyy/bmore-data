@@ -1,0 +1,19 @@
+package com.bmore.spring.dao;
+
+import java.util.List;
+
+public class AccessibilityDao implements Dao {
+
+	@Override
+	public void persist(Object obj) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public <T> List<T> getAll(Class<T> c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+    xmlns:jms="http://www.springframework.org/schema/jms"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+            http://www.springframework.org/schema/jdbc
+            http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.1.xsd
+            http://www.springframework.org/schema/jee
+            http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+            http://activemq.apache.org/schema/core
+            http://activemq.apache.org/schema/core/activemq-core-5.5.0.xsd
+            http://www.springframework.org/schema/jms 
+            http://www.springframework.org/schema/jms/spring-jms-2.5.xsd">
+
+  <context:annotation-config />
+  <context:component-scan base-package="com.bmore" />
+  <tx:annotation-driven />
+ <bean id="dataSource1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName"><value>org.gjt.mm.mysql.Driver</value></property>
+    <property name="url"><value>jdbc:mysql://127.0.0.1:3306/bmore3</value> </property>
+    <property name="username"><value>admin</value> </property>
+    <property name="password"><value>admin</value></property>
+  </bean>
+
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+	p:dataSource-ref="dataSource1"
+    p:persistenceUnitName="BmoreJpaPersistenceUnit"/>
+  
+  	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+  	<bean id="transactionManager"
+          class="org.springframework.orm.jpa.JpaTransactionManager"
+          p:entityManagerFactory-ref="entityManagerFactory"/>
+  
+  	<tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

@@ -1,0 +1,32 @@
+ SAM'S CLUB # 4771 , Limited Supermarket , 2601 PORT COVINGTON dr Baltimore, MD  , 39.259876, -76.607801
+ STOP-SHOP & SAVE , Limited Supermarket , 1600 HARFORD AVE Baltimore, MD  , 39.30899, -76.600977
+ ALDI INC. , Limited Supermarket , 3250 E FAYETTE ST Baltimore, MD  , 39.295593, -76.571709
+ SAFEWAY   (STORE #1481) , Full Supermarket ,2610 BOSTON ST Baltimore, MD  , 39.280768, -76.578749
+ GIANT FOOD STORE #124 , Full Supermarket , 711 W 40TH ST Baltimore, MD  , 39.336394, -76.630152
+ SUPERFRESH , Full Supermarket , 1020 W 41ST ST Baltimore, MD  , 39.338374, -76.635301
+ GIANT FOODS #303 , Full Supermarket ,601 E 33RD ST Baltimore, MD  , 39.328027, -76.607963
+ SAVE-A-LOT , Limited Supermarket , 4001 ERDMAN AVE Baltimore, MD  , 39.314349, -76.568817
+ WHOLE FOODS MARKET , Full Supermarket , 1330 SMITH AVE Baltimore, MD  , 39.368562, -76.649729
+ MARS SUPER MARKETS INC. , Small Supermarket , 1700 E NORTHERN PKWY Baltimore, MD  , 39.367276, -76.582620
+ STOP SHOP & SAVE , Limited Supermarket , 929 N CAROLINE ST Baltimore, MD  , 39.301518, -76.596822
+ BAINES STOP SHOP & SAVE #04 , Limited Supermarket , 2701 W COLD SPRING LN Baltimore, MD  , 39.338994, -76.666738
+ SAFEWAY STORES INC. #1153 , Full Supermarket , 1205 W PRATT ST Baltimore, MD  , 39.285263, -76.636602
+ GIANT FOOD STORE #145 , Full Supermarket , 5150 SINCLAIR LN Baltimore, MD  , 39.323996, -76.544435
+ BI-RITE , Limited Supermarket , 5950 BELAIR RD Baltimore, MD  , 39.347184, -76.540738
+ EDDIE'S SUPERMARKET , Small Supermarket , 3117 ST PAUL ST Baltimore, MD  , 39,326307, -76.615556
+ SUPER FRESH FOOD MARKETS #813 , Full Supermarket , 2495 FREDERICK AVE Baltimore, MD  , 39.282852, -76.653440
+ FOOD KING SUPERMARKET , Small Supermarket , 3400 ANNAPOLIS RD Baltimore, MD  , 39.248577, -76.641274
+ SAVE-A-LOT , Limited Supermarket , 717 WASHINGTON BLVD Baltimore, MD  , 39.282458, -76.626869
+ FOOD KING SUPERMARKET , Small Supermarket ,  5700 WABASH AVE Baltimore, MD  , 39.346055, -76.700865
+ STOP SHOP & SAVE , Limited Supermarket , 2301 LIBERTY HEIGHTS AVE Baltimore, MD  , 39.316610, -76.655361
+ STOP SHOP & SAVE , Limited Supermarket , 3427 CLIFTON AVE Baltimore, MD  , 39.310033, -76.675680
+ SAVE-A-LOT , Limited Supermarket ,6836 REISTERSTOWN RD Baltimore, MD  , 39.359575, -76.709248
+ SAVE-A-LOT , Limited Supermarket ,2008 MARYLAND AVE Baltimore, MD  , 39.312334, -76.6185
+ SAFEWAY INC. # 1513 , Full Supermarket , 4401 HARFORD RD Baltimore, MD  , 39.339207, -76.571214
+ EDDIE'S SUPER MARKET , Small Supermarket , 5113 ROLAND AVE Baltimore, MD  , 39.355783, -76.634212
+ SAVE-A-LOT , Limited Supermarket , 1500 HAVENWOOD Baltimore, MD  , 39.341198, -76.591738
+ WHOLE FOODS MARKET , Full Supermarket , 1001 FLEET ST Baltimore, MD  , 39.283629, -76,599553
+ FOOD KING , Small Supermarket , 5830 HILLEN RD Baltimore, MD  , 39.359302, -76.582152
+ GIANT FOOD # 397 , Full Supermarket , 6620 REISTERSTOWN RD Baltimore, MD  , 39.355122, -76.706998
+ HIGHLANDTOWN  GROCERY  &  DELI , Small Supermarket , 19 S HIGHLAND AVE Baltimore, MD  , 39.291802, -76.569239
+ SHOPPERS , Full Supermarket , 900 E Fort Ave Baltimore, MD  , 39.271692, -76.600372

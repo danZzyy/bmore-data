@@ -1,0 +1,6 @@
+package com.bmore.spring.model;
+
+public interface geoJSONable {
+
+	public
+}

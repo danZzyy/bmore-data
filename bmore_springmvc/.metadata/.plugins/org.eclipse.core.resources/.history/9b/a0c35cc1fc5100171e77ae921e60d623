@@ -1,0 +1,19 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>
+	Hello world!  
+</h1>
+
+<P id="a">   </P>
+</body>
+<script>
+	var obj = ${obj};
+	var t = JSON.parse(obj);
+	document.getElementById('a').innerHTML = t['name'] + " " + t['type'];
+</script>
+</html>

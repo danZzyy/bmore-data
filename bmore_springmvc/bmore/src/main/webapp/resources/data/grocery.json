@@ -1,0 +1,587 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "uuwk-975y",
+      "name" : "Grocery Stores",
+      "attribution" : "Baltimore City Planning Department",
+      "attributionLink" : "http://www.baltimorecity.gov/Government/AgenciesDepartments/Planning.aspx",
+      "averageRating" : 0,
+      "category" : "Health",
+      "createdAt" : 1323884730,
+      "description" : "This data lists the locations of grocery stores in the City. This may not be a complete list.",
+      "displayType" : "table",
+      "downloadCount" : 6119,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1486060431,
+      "licenseId" : "CC_30_BY",
+      "newBackend" : false,
+      "numberOfComments" : 1,
+      "oid" : 7693158,
+      "provenance" : "official",
+      "publicationAppendEnabled" : false,
+      "publicationDate" : 1396567620,
+      "publicationGroup" : 260327,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1396567616,
+      "rowsUpdatedBy" : "6r9a-dfdj",
+      "tableId" : 1533916,
+      "totalTimesRated" : 0,
+      "viewCount" : 2377,
+      "viewLastModified" : 1486356278,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 141278124,
+        "name" : "name",
+        "dataTypeName" : "text",
+        "fieldName" : "name",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 1786437,
+        "width" : 251,
+        "cachedContents" : {
+          "non_null" : 44,
+          "largest" : "WHOLE FOODS MARKET",
+          "null" : 0,
+          "top" : [ {
+            "item" : "SAVE-A-LOT",
+            "count" : 20
+          }, {
+            "item" : "ALDI",
+            "count" : 19
+          }, {
+            "item" : "ALDI     (A.K.A. 3000 ATCO AVENUE)",
+            "count" : 18
+          }, {
+            "item" : "SAVE A LOT OF FELLS  POINT",
+            "count" : 17
+          }, {
+            "item" : "SAFEWAY, INC.",
+            "count" : 16
+          }, {
+            "item" : "SANTONI'S, INC.",
+            "count" : 15
+          }, {
+            "item" : "SHOPPERS FOOD & PHARMACY # 7567",
+            "count" : 14
+          }, {
+            "item" : "SAVE-ON-FOOD SUPERMARKET",
+            "count" : 13
+          }, {
+            "item" : "GIANT FOOD STORE # 317",
+            "count" : 12
+          }, {
+            "item" : "STOP, SHOP & SAVE",
+            "count" : 11
+          }, {
+            "item" : "STOP-SHOP & SAVE",
+            "count" : 10
+          }, {
+            "item" : "SAM'S CLUB # 4771",
+            "count" : 9
+          }, {
+            "item" : "ALDI,  INC.",
+            "count" : 8
+          }, {
+            "item" : "SAFEWAY   (STORE #1481)",
+            "count" : 7
+          }, {
+            "item" : "GIANT FOOD STORE #124",
+            "count" : 6
+          }, {
+            "item" : "SUPERFRESH",
+            "count" : 5
+          }, {
+            "item" : "GIANT FOODS #303",
+            "count" : 4
+          }, {
+            "item" : "WHOLE FOODS MARKET",
+            "count" : 3
+          }, {
+            "item" : "STOP SHOP SAVE FOOD MARKET",
+            "count" : 2
+          }, {
+            "item" : "MARS SUPER MARKETS INC.",
+            "count" : 1
+          } ],
+          "smallest" : "ALDI"
+        },
+        "format" : { }
+      }, {
+        "id" : 141278125,
+        "name" : "type",
+        "dataTypeName" : "text",
+        "fieldName" : "type",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 1786438,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 44,
+          "largest" : "Small Supermarket",
+          "null" : 0,
+          "top" : [ {
+            "item" : "Limited Supermarket",
+            "count" : 20
+          }, {
+            "item" : "Full Supermarket",
+            "count" : 19
+          }, {
+            "item" : "Small Supermarket",
+            "count" : 18
+          } ],
+          "smallest" : "Full Supermarket"
+        },
+        "format" : { }
+      }, {
+        "id" : 141278126,
+        "name" : "zipCode",
+        "dataTypeName" : "text",
+        "fieldName" : "zipcode",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 1786439,
+        "width" : 80,
+        "cachedContents" : {
+          "non_null" : 44,
+          "largest" : "21239",
+          "null" : 0,
+          "top" : [ {
+            "item" : "21217",
+            "count" : 20
+          }, {
+            "item" : "21215",
+            "count" : 19
+          }, {
+            "item" : "21230",
+            "count" : 18
+          }, {
+            "item" : "21231",
+            "count" : 17
+          }, {
+            "item" : "21218",
+            "count" : 16
+          }, {
+            "item" : "21224",
+            "count" : 15
+          }, {
+            "item" : "21225",
+            "count" : 14
+          }, {
+            "item" : "21229",
+            "count" : 13
+          }, {
+            "item" : "21201",
+            "count" : 12
+          }, {
+            "item" : "21202",
+            "count" : 11
+          }, {
+            "item" : "21211",
+            "count" : 10
+          }, {
+            "item" : "21213",
+            "count" : 9
+          }, {
+            "item" : "21209",
+            "count" : 8
+          }, {
+            "item" : "21239",
+            "count" : 7
+          }, {
+            "item" : "21205",
+            "count" : 6
+          }, {
+            "item" : "21223",
+            "count" : 5
+          }, {
+            "item" : "21206",
+            "count" : 4
+          }, {
+            "item" : "21227",
+            "count" : 3
+          }, {
+            "item" : "21216",
+            "count" : 2
+          }, {
+            "item" : "21214",
+            "count" : 1
+          } ],
+          "smallest" : "21201"
+        },
+        "format" : { }
+      }, {
+        "id" : 141278127,
+        "name" : "neighborhood",
+        "dataTypeName" : "text",
+        "fieldName" : "neighborhood",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 1786440,
+        "width" : 155,
+        "cachedContents" : {
+          "non_null" : 44,
+          "largest" : "Wyndhurst",
+          "null" : 0,
+          "top" : [ {
+            "item" : "Bolton Hill",
+            "count" : 20
+          }, {
+            "item" : "Ashburton",
+            "count" : 19
+          }, {
+            "item" : "Morrell Park",
+            "count" : 18
+          }, {
+            "item" : "Fells Point",
+            "count" : 17
+          }, {
+            "item" : "Charles Village",
+            "count" : 16
+          }, {
+            "item" : "Baltimore Highlands",
+            "count" : 15
+          }, {
+            "item" : "Pulaski Industrial Area",
+            "count" : 14
+          }, {
+            "item" : "Brooklyn",
+            "count" : 13
+          }, {
+            "item" : "Hunting Ridge",
+            "count" : 12
+          }, {
+            "item" : "Bridgeview/Greenlawn",
+            "count" : 11
+          }, {
+            "item" : "Upton",
+            "count" : 10
+          }, {
+            "item" : "Port Covington",
+            "count" : 9
+          }, {
+            "item" : "Oliver",
+            "count" : 8
+          }, {
+            "item" : "Ellwood Park/Monument",
+            "count" : 7
+          }, {
+            "item" : "Canton",
+            "count" : 6
+          }, {
+            "item" : "Hampden",
+            "count" : 5
+          }, {
+            "item" : "Hoes Heights",
+            "count" : 4
+          }, {
+            "item" : "Better Waverly",
+            "count" : 3
+          }, {
+            "item" : "Belair-Edison",
+            "count" : 2
+          }, {
+            "item" : "Sabina-Mattfeldt",
+            "count" : 1
+          } ],
+          "smallest" : "Ashburton"
+        },
+        "format" : { }
+      }, {
+        "id" : 141278128,
+        "name" : "councilDistrict",
+        "dataTypeName" : "number",
+        "fieldName" : "councildistrict",
+        "position" : 5,
+        "renderTypeName" : "number",
+        "tableColumnId" : 1786441,
+        "width" : 101,
+        "cachedContents" : {
+          "non_null" : 44,
+          "average" : "7.181818181818182",
+          "largest" : "14",
+          "null" : 0,
+          "top" : [ {
+            "item" : "11",
+            "count" : 20
+          }, {
+            "item" : "6",
+            "count" : 19
+          }, {
+            "item" : "10",
+            "count" : 18
+          }, {
+            "item" : "1",
+            "count" : 17
+          }, {
+            "item" : "12",
+            "count" : 16
+          }, {
+            "item" : "2",
+            "count" : 15
+          }, {
+            "item" : "8",
+            "count" : 14
+          }, {
+            "item" : "7",
+            "count" : 13
+          }, {
+            "item" : "14",
+            "count" : 12
+          }, {
+            "item" : "13",
+            "count" : 11
+          }, {
+            "item" : "5",
+            "count" : 10
+          }, {
+            "item" : "4",
+            "count" : 9
+          }, {
+            "item" : "9",
+            "count" : 8
+          }, {
+            "item" : "3",
+            "count" : 7
+          } ],
+          "smallest" : "1",
+          "sum" : "316"
+        },
+        "format" : { }
+      }, {
+        "id" : 141278129,
+        "name" : "policeDistrict",
+        "dataTypeName" : "text",
+        "fieldName" : "policedistrict",
+        "position" : 6,
+        "renderTypeName" : "text",
+        "tableColumnId" : 1786442,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 44,
+          "largest" : "WESTERN",
+          "null" : 0,
+          "top" : [ {
+            "item" : "CENTRAL",
+            "count" : 20
+          }, {
+            "item" : "NORTHWESTERN",
+            "count" : 19
+          }, {
+            "item" : "SOUTHWESTERN",
+            "count" : 18
+          }, {
+            "item" : "SOUTHEASTERN",
+            "count" : 17
+          }, {
+            "item" : "NORTHERN",
+            "count" : 16
+          }, {
+            "item" : "SOUTHERN",
+            "count" : 15
+          }, {
+            "item" : "WESTERN",
+            "count" : 14
+          }, {
+            "item" : "EASTERN",
+            "count" : 13
+          }, {
+            "item" : "NORTHEASTERN",
+            "count" : 12
+          } ],
+          "smallest" : "CENTRAL"
+        },
+        "format" : { }
+      }, {
+        "id" : 141278130,
+        "name" : "Location 1",
+        "dataTypeName" : "location",
+        "fieldName" : "location_1",
+        "position" : 7,
+        "renderTypeName" : "location",
+        "tableColumnId" : 1786443,
+        "width" : 220,
+        "cachedContents" : {
+          "non_null" : 44,
+          "largest" : {
+            "human_address" : "{\"address\":\"929 CAROLINE ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}"
+          },
+          "null" : 0,
+          "top" : [ {
+            "item" : {
+              "human_address" : "{\"address\":\"6620 REISTERSTOWN RD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}"
+            },
+            "count" : 20
+          }, {
+            "item" : {
+              "human_address" : "{\"address\":\"19 HIGHLAND AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}"
+            },
+            "count" : 19
+          }, {
+            "item" : {
+              "human_address" : "{\"address\":\"900 Fort Ave\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}"
+            },
+            "count" : 18
+          } ],
+          "smallest" : {
+            "human_address" : "{\"address\":\"1001 FLEET ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}"
+          }
+        },
+        "format" : { },
+        "subColumnTypes" : [ "human_address", "latitude", "longitude", "machine_address", "needs_recoding" ]
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "license" : {
+        "name" : "Creative Commons Attribution 3.0 Unported",
+        "logoUrl" : "images/licenses/cc30by.png",
+        "termsLink" : "http://creativecommons.org/licenses/by/3.0/legalcode"
+      },
+      "metadata" : {
+        "custom_fields" : {
+          "Publishing Entity" : {
+            "Department" : "Planning"
+          }
+        }
+      },
+      "owner" : {
+        "id" : "6r9a-dfdj",
+        "displayName" : "Open Baltimore",
+        "roleName" : "administrator",
+        "screenName" : "Open Baltimore",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_sdp", "edit_site_theme", "moderate_comments", "manage_users", "chown_datasets", "edit_nominations", "approve_nominations", "feature_items", "federations", "manage_stories", "manage_approval", "change_configurations", "view_domain", "view_others_datasets", "edit_pages", "create_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "create_dashboards", "manage_provenance", "create_story", "edit_story_title_desc", "create_story_copy", "delete_story", "manage_story_collaborators", "manage_story_visibility", "manage_story_public_version", "edit_story", "view_unpublished_story", "view_story", "view_all_dataset_status_logs", "use_data_connectors" ]
+      },
+      "query" : { },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "6r9a-dfdj",
+        "displayName" : "Open Baltimore",
+        "roleName" : "administrator",
+        "screenName" : "Open Baltimore",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_sdp", "edit_site_theme", "moderate_comments", "manage_users", "chown_datasets", "edit_nominations", "approve_nominations", "feature_items", "federations", "manage_stories", "manage_approval", "change_configurations", "view_domain", "view_others_datasets", "edit_pages", "create_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "create_dashboards", "manage_provenance", "create_story", "edit_story_title_desc", "create_story_copy", "delete_story", "manage_story_collaborators", "manage_story_visibility", "manage_story_public_version", "edit_story", "view_unpublished_story", "view_story", "view_all_dataset_status_logs", "use_data_connectors" ]
+      },
+      "tags" : [ "food", "grocery" ],
+      "flags" : [ "default", "restorable", "restorePossibleForType" ]
+    }
+  },
+  "data" : [ [ 1, "4B241118-A114-4AA2-893F-59059022B5B6", 1, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAVE-A-LOT", "Limited Supermarket", "21217", "Bolton Hill", "11", "CENTRAL", [ "{\"address\":\"250 MCMECHEN st\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 2, "9342D707-143B-4BAB-9C43-DF072B5BA0DD", 2, 1323855962, "393202", 1323855962, "393202", "{\n}", "ALDI", "Limited Supermarket", "21215", "Ashburton", "6", "NORTHWESTERN", [ "{\"address\":\"3601 COLD SPRING LN\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 3, "5DAF95E4-6E26-42D7-9B49-CFEBDE6FD226", 3, 1323855962, "393202", 1323855962, "393202", "{\n}", "ALDI     (A.K.A. 3000 ATCO AVENUE)", "Limited Supermarket", "21230", "Morrell Park", "10", "SOUTHWESTERN", [ "{\"address\":\"3140 WASHINGTON BLVD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 4, "F73AE7CC-1CEC-4371-A80B-F73ECAD5B40F", 4, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAVE A LOT OF FELLS  POINT", "Limited Supermarket", "21231", "Fells Point", "1", "SOUTHEASTERN", [ "{\"address\":\"517 BROADWAY\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 5, "E6D35948-1838-4EBD-A458-64DB2D9EFDDF", 5, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAFEWAY, INC.", "Full Supermarket", "21218", "Charles Village", "12", "NORTHERN", [ "{\"address\":\"2401 CHARLES ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 6, "7E70CC8D-C919-4B19-B4C8-3A39333BB125", 6, 1323855962, "393202", 1323855962, "393202", "{\n}", "SANTONI'S, INC.", "Small Supermarket", "21224", "Baltimore Highlands", "2", "SOUTHEASTERN", [ "{\"address\":\"3800 LOMBARD ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 7, "F3335CD2-D369-44E5-856B-F3A9F563EE01", 7, 1323855962, "393202", 1323855962, "393202", "{\n}", "SHOPPERS FOOD & PHARMACY # 7567", "Full Supermarket", "21224", "Pulaski Industrial Area", "2", "SOUTHEASTERN", [ "{\"address\":\"6500 EASTERN AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 8, "033B2AA7-1489-43F0-B3A2-A5458A729BDB", 8, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAVE-ON-FOOD SUPERMARKET", "Limited Supermarket", "21225", "Brooklyn", "10", "SOUTHERN", [ "{\"address\":\"413 PATAPSCO AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 9, "715F2D60-7F3E-4B33-9C5B-61DEE02A53FA", 9, 1323855962, "393202", 1323855962, "393202", "{\n}", "GIANT FOOD STORE # 317", "Full Supermarket", "21229", "Hunting Ridge", "8", "SOUTHWESTERN", [ "{\"address\":\"4624 EDMONDSON AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 10, "9B16FC40-A2D4-4D1D-946D-BF410DC64CFD", 10, 1323855962, "393202", 1323855962, "393202", "{\n}", "STOP, SHOP & SAVE", "Limited Supermarket", "21217", "Bridgeview/Greenlawn", "7", "WESTERN", [ "{\"address\":\"1400 MONROE ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 11, "5937F7EA-21A8-4313-88A3-D6E97CB4D9DD", 11, 1323855962, "393202", 1323855962, "393202", "{\n}", "STOP-SHOP & SAVE", "Limited Supermarket", "21201", "Upton", "11", "CENTRAL", [ "{\"address\":\"1101 PENNSYLVANIA AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 12, "F05413AC-7B9D-4EE2-B4AF-2B50B1B1AEAB", 12, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAM'S CLUB # 4771", "Limited Supermarket", "21230", "Port Covington", "10", "SOUTHERN", [ "{\"address\":\"2601 PORT COVINGTON dr\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 13, "0B0FCE84-C061-49A9-9237-5DF56B61DB10", 13, 1323855962, "393202", 1323855962, "393202", "{\n}", "STOP-SHOP & SAVE", "Limited Supermarket", "21202", "Oliver", "12", "EASTERN", [ "{\"address\":\"1600 HARFORD AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 14, "BD62A52E-864A-4D50-AF0F-901F992B5E59", 14, 1323855962, "393202", 1323855962, "393202", "{\n}", "ALDI,  INC.", "Limited Supermarket", "21224", "Ellwood Park/Monument", "1", "SOUTHEASTERN", [ "{\"address\":\"3250 FAYETTE ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 15, "705E73A1-7A6B-4B83-9B2E-7AF74EA180F6", 15, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAFEWAY   (STORE #1481)", "Full Supermarket", "21224", "Canton", "1", "SOUTHEASTERN", [ "{\"address\":\"2610 BOSTON ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 16, "2B77A422-2E9B-40B5-9854-269A0A3F86EE", 16, 1323855962, "393202", 1323855962, "393202", "{\n}", "GIANT FOOD STORE #124", "Full Supermarket", "21211", "Hampden", "14", "NORTHERN", [ "{\"address\":\"711 40TH ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 17, "CE8CF94C-B39D-4825-B37A-44810591B2E0", 17, 1323855962, "393202", 1323855962, "393202", "{\n}", "SUPERFRESH", "Full Supermarket", "21211", "Hoes Heights", "14", "NORTHERN", [ "{\"address\":\"1020 41ST ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 18, "0E5B0B8F-F904-40A7-86A1-1E433844D5B3", 18, 1323855962, "393202", 1323855962, "393202", "{\n}", "GIANT FOODS #303", "Full Supermarket", "21218", "Better Waverly", "14", "NORTHERN", [ "{\"address\":\"601 33RD ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 19, "1C1C10C9-EC9A-4873-9FBB-7B5E41A3B369", 19, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAVE-A-LOT", "Limited Supermarket", "21213", "Belair-Edison", "13", "NORTHEASTERN", [ "{\"address\":\"4001 ERDMAN AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 20, "C3B99800-AFB6-4298-9333-F13C58AE1995", 20, 1323855962, "393202", 1323855962, "393202", "{\n}", "WHOLE FOODS MARKET", "Full Supermarket", "21209", "Sabina-Mattfeldt", "5", "NORTHERN", [ "{\"address\":\"1330 SMITH AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 21, "2680ED79-CA24-4C28-BCF8-E2576DBE0656", 21, 1323855962, "393202", 1323855962, "393202", "{\n}", "STOP SHOP SAVE FOOD MARKET", "Limited Supermarket", "21239", "Glen Oaks", "4", "NORTHERN", [ "{\"address\":\"5600 THE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 22, "1497BF80-38CC-451C-B890-4C57EFFBDE6E", 22, 1323855962, "393202", 1323855962, "393202", "{\n}", "MARS SUPER MARKETS INC.", "Small Supermarket", "21239", "Loch Raven", "4", "NORTHEASTERN", [ "{\"address\":\"1700 NORTHERN PKWY\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 23, "A9331002-4DB2-487A-B485-86567B6730F3", 23, 1323855962, "393202", 1323855962, "393202", "{\n}", "STOP, SHOP & SAVE", "Limited Supermarket", "21205", "Gay Street", "12", "EASTERN", [ "{\"address\":\"929 CAROLINE ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 24, "0D611F88-D8CD-403D-B19F-7D79B2C2EAD5", 24, 1323855962, "393202", 1323855962, "393202", "{\n}", "BAINES STOP SHOP & SAVE #04", "Limited Supermarket", "21215", "Central Park Heights", "6", "NORTHWESTERN", [ "{\"address\":\"2701 COLD SPRING LN\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 25, "14A9BB0F-484E-41AA-9402-F3C824E61628", 25, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAFEWAY STORES, INC. #1153", "Full Supermarket", "21223", "Washington Village", "9", "SOUTHERN", [ "{\"address\":\"1205 PRATT ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 26, "E77F0DC6-21CC-44CF-A9B8-A40BFE3C167F", 26, 1323855962, "393202", 1323855962, "393202", "{\n}", "GIANT FOOD STORE #145", "Full Supermarket", "21206", "Frankford", "2", "NORTHEASTERN", [ "{\"address\":\"5150 SINCLAIR LN\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 27, "73BCCF96-D7EC-496B-B527-B1E2D9A32CD3", 27, 1323855962, "393202", 1323855962, "393202", "{\n}", "BI-RITE", "Limited Supermarket", "21206", "Glenham-Belford", "2", "NORTHEASTERN", [ "{\"address\":\"5950 BELAIR RD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 28, "3A765CAD-ABD1-459A-9A3A-FFFF0A1E8A7F", 28, 1323855962, "393202", 1323855962, "393202", "{\n}", "EDDIE'S SUPERMARKET", "Small Supermarket", "21218", "Charles Village", "14", "NORTHERN", [ "{\"address\":\"3117 ST PAUL ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 29, "30EC2918-A70B-4243-8836-A0A6D4DBF701", 29, 1323855962, "393202", 1323855962, "393202", "{\n}", "SUPER FRESH FOOD MARKETS #813", "Full Supermarket", "21223", "Millhill", "9", "SOUTHWESTERN", [ "{\"address\":\"2495 FREDERICK AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 30, "AD5E8A44-E771-4EF2-9048-8AFCCC1A52C2", 30, 1323855962, "393202", 1323855962, "393202", "{\n}", "FOOD KING SUPERMARKET", "Small Supermarket", "21227", "Cherry Hill", "10", "SOUTHERN", [ "{\"address\":\"3400 ANNAPOLIS RD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 31, "7052EB2C-AB71-4529-958E-E6745E68C9AB", 31, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAVE-A-LOT", "Limited Supermarket", "21230", "Washington Village", "11", "SOUTHERN", [ "{\"address\":\"717 WASHINGTON BLVD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 32, "2AE12B67-951E-446D-9F3B-95B931D79B00", 32, 1323855962, "393202", 1323855962, "393202", "{\n}", "FOOD KING SUPERMARKET", "Small Supermarket", "21215", "Seton Business Park", "5", "NORTHWESTERN", [ "{\"address\":\"5700 WABASH AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 33, "C5462F98-31F5-4B7D-AAFE-99BBD0993CA8", 33, 1323855962, "393202", 1323855962, "393202", "{\n}", "STOP, SHOP & SAVE", "Limited Supermarket", "21215", "Mondawmin", "7", "WESTERN", [ "{\"address\":\"2301 LIBERTY HEIGHTS AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 34, "9EBC8965-7D33-4112-B970-2E5BF2E1A8CF", 34, 1323855962, "393202", 1323855962, "393202", "{\n}", "STOP, SHOP & SAVE", "Limited Supermarket", "21216", "Mount Holly", "7", "SOUTHWESTERN", [ "{\"address\":\"3427 CLIFTON AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 35, "ABD1DA6E-DAD5-47CD-BD08-BAD9332B47A4", 35, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAVE-A-LOT", "Limited Supermarket", "21215", "Reisterstown Station", "5", "NORTHWESTERN", [ "{\"address\":\"6836 REISTERSTOWN RD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 36, "07C850C2-81E2-44F9-B9BE-0AA96B5F8E26", 36, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAVE-A-LOT", "Limited Supermarket", "21218", "Charles North", "12", "NORTHERN", [ "{\"address\":\"2008 MARYLAND AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 37, "769B4937-1668-4013-956B-86AE129A5DD2", 37, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAFEWAY, INC. # 1513", "Full Supermarket", "21214", "Beverly Hills", "3", "NORTHEASTERN", [ "{\"address\":\"4401 HARFORD RD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 38, "96BC2B94-DDEB-4949-9921-7E689E5AFA21", 38, 1323855962, "393202", 1323855962, "393202", "{\n}", "EDDIE'S SUPER MARKET", "Small Supermarket", "21210", "Wyndhurst", "6", "NORTHERN", [ "{\"address\":\"5113 ROLAND AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 39, "1AC66A09-E8D9-4CA6-AD99-DA56ACF13199", 39, 1323855962, "393202", 1323855962, "393202", "{\n}", "SAVE-A-LOT", "Limited Supermarket", "21218", "Hillen", "3", "NORTHEASTERN", [ "{\"address\":\"1500 HAVENWOOD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 40, "A19F8489-1CED-471C-BAF3-DA68E0C6AF38", 40, 1323855962, "393202", 1323855962, "393202", "{\n}", "WHOLE FOODS MARKET", "Full Supermarket", "21202", "Inner Harbor", "1", "SOUTHEASTERN", [ "{\"address\":\"1001 FLEET ST\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 41, "9C9CFC89-B43C-47AB-A9BE-2FFB8AD4E457", 41, 1323855962, "393202", 1323855962, "393202", "{\n}", "FOOD KING", "Small Supermarket", "21239", "Loch Raven", "4", "NORTHEASTERN", [ "{\"address\":\"5830 HILLEN RD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 42, "5A52AFCD-8551-4A96-8659-DC0048762555", 42, 1323855962, "393202", 1323855962, "393202", "{\n}", "GIANT FOOD # 397", "Full Supermarket", "21215", "Reisterstown Station", "5", "NORTHWESTERN", [ "{\"address\":\"6620 REISTERSTOWN RD\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 43, "0912E4BA-4A73-4498-BEF6-C8D7547B7C0F", 43, 1323855962, "393202", 1323855962, "393202", "{\n}", "HIGHLANDTOWN  GROCERY  &  DELI", "Small Supermarket", "21224", "Baltimore Highlands", "1", "SOUTHEASTERN", [ "{\"address\":\"19 HIGHLAND AVE\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+, [ 44, "80C84894-DDBE-4069-BC6E-61A4AADB5E39", 44, 1323855962, "393202", 1323855962, "393202", "{\n}", "SHOPPERS", "Full Supermarket", "21230", "Riverside", "10", "SOUTHERN", [ "{\"address\":\"900 Fort Ave\",\"city\":\"Baltimore\",\"state\":\"MD\",\"zip\":\"\"}", null, null, null, true ] ]
+ ]
+}

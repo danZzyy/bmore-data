@@ -1,0 +1,28 @@
+package com.bmore.spring.model;
+
+import java.util.ArrayList;
+
+public class FeatureCollection implements geoJSONable {
+
+	private ArrayList<geoJSONable> features;
+	
+	@Override
+	public String toJSON() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public ArrayList<geoJSONable> getFeatures() {
+		return features;
+	}
+
+	public void setFeatures(ArrayList<geoJSONable> features) {
+		this.features = features;
+	}
+	
+	//Add feature to FeatureCollection
+	public void addFeature(geoJSONable feature){
+		features.add(feature);
+	}
+
+}

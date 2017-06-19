@@ -1,0 +1,79 @@
+#mapid, #map2 {
+  height: 500px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#map2 {
+  visibility: hidden;
+}
+header, #buttons {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+span {
+  display: inline;
+}
+.bike {
+  height: 40px;
+}
+#title {
+  font-size: 3em;
+}
+p {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+#gen, #acc {
+  padding: 5px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#gen {
+  background-color: #0065ff;
+  color: white;
+}
+#acc {
+  background-color: #e8e8e8;
+}
+#genLegend, #accLegend {
+  height: 100px;
+  line-height: 80%;
+}
+.legendTable {
+  margin-left: auto;
+  margin-right: auto;
+}
+.spacing{
+  width: 100px;
+}
+#stats {
+  margin-left: 5%;
+}
+.bigStat {
+  font-size: 2em;
+}
+#yesStat {
+  color: #0d8700;
+}
+#somewhatStat {
+  color: #a88300;
+}
+#noStat {
+  color: #a80101;
+}
+#food-desert {
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+ul {
+  margin-left: 5%;
+}

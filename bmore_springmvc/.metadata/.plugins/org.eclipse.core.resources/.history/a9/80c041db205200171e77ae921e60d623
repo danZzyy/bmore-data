@@ -1,0 +1,5 @@
+package com.bmore.spring.dao;
+
+public interface Dao {
+
+}

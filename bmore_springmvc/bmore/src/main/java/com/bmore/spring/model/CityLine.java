@@ -1,19 +1,29 @@
 package com.bmore.spring.model;
 
-import com.vividsolutions.jts.geom.MultiLineString;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.json.simple.JSONObject;
+
+@Entity(name="city_line")
+@Table(name="city_line")
 public class CityLine implements geoJSONable{
 
+	@Id
 	private int id;
 	
-	private MultiLineString geom;
+	private String geom;
 	
 	@Override
 	public String toJSON() {
-		// TODO Auto-generated method stub
-		return null;
+		String JSON = "{\"type\": \"Feature\", \"geometry\": {\"type\": \"MultiLineString\", \"coordinates\": %s } }";
+		
+		return String.format(JSON, this.geom);
 	}
 
+	@Column(name="id")
 	public int getId() {
 		return id;
 	}
@@ -22,11 +32,12 @@ public class CityLine implements geoJSONable{
 		this.id = id;
 	}
 
-	public MultiLineString getGeom() {
+	@Column(name="geom")
+	public String getGeom() {
 		return geom;
 	}
 
-	public void setGeom(MultiLineString geom) {
+	public void setGeom(String geom) {
 		this.geom = geom;
 	}
 

@@ -1,47 +1,44 @@
 package com.bmore.spring.model;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
-
-import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.geom.Point;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 @Entity(name="grocery")
 @Table(name="grocery")
-public class Grocery implements geoJSONable{
+public class Grocery{
 
 	@Id
-	private int id;
+	@Column(name="groc_id")
+	private int grocId;
 	
 	private String name;
 	
 	private String address;
 	
-	private String type;
+	private SupermarketType type;
 	
 	private double lat;
 	
 	private double lng;
 
-	@Override
-	public String toJSON() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public int getGrocId() {
+		return grocId;
 	}
 
-	@Column(name="id")
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public void setGrocId(int grocId) {
+		this.grocId = grocId;
 	}
 	
 	@Column(name="name")
@@ -62,12 +59,15 @@ public class Grocery implements geoJSONable{
 		this.address = address;
 	}
 
-	@Column(name="type")
-	public String getType() {
+	
+	@Access(AccessType.PROPERTY)
+	@OneToOne
+	@JoinColumn(name="type")
+	public SupermarketType getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(SupermarketType type) {
 		this.type = type;
 	}
 

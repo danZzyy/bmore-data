@@ -6,9 +6,13 @@ public class FeatureCollection implements geoJSONable {
 
 	private ArrayList<geoJSONable> features;
 	
+	public FeatureCollection(){
+		this.features = new ArrayList<geoJSONable>();
+	}
+	
 	@Override
 	public String toJSON() {
-		String json = "{ 'type': 'FeatureCollection','features': [";
+		String json = "{ \"type\": \"FeatureCollection\",\"features\": [";
 		for(int j = 0; j < features.size(); j++){
 			
 			json += features.get(j).toJSON();

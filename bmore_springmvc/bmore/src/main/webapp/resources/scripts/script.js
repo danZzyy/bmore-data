@@ -1,4 +1,3 @@
-var grocLayer; //grocery point layer
 var bikeLayer = []; //trails/lanes as line layer
 
 var tog = true;

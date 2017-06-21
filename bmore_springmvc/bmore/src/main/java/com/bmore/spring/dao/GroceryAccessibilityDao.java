@@ -6,9 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-public class GroceryDao implements Dao{
+public class GroceryAccessibilityDao implements Dao {
 
 	@PersistenceContext
 	private EntityManager em;
@@ -24,4 +22,5 @@ public class GroceryDao implements Dao{
 		TypedQuery<T> query = em.createQuery(" from " + c.getName(), c);
 		return query.getResultList();
 	}
+
 }

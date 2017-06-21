@@ -7,22 +7,22 @@ import org.springframework.stereotype.Service;
 
 import com.bmore.spring.dao.Dao;
 import com.bmore.spring.model.Accessibility;
-import com.bmore.spring.model.Grocery;
+import com.bmore.spring.model.GroceryAccessibility;
 
-@Service("accessibilityService")
-public class AccessibilityServiceImpl implements AccessibilityService {
+@Service("groceryAccessibilityService")
+public class GroceryAccessibilityServiceImpl implements GroceryAccessibilityService {
 
 	@Autowired
 	Dao dao;
 	@Override
-	public void persist(Accessibility a) {
+	public void persist(GroceryAccessibility a) {
 		dao.persist(a);
 
 	}
 
 	@Override
-	public List<Accessibility> getAll() {
-		return dao.getAll(Accessibility.class);
+	public List<GroceryAccessibility> getAll() {
+		return dao.getAll(GroceryAccessibility.class);
 	}
 
 }

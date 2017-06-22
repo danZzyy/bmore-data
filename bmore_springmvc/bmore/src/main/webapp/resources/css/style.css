@@ -1,8 +1,14 @@
-#mapid, #map2 {
-  height: 500px;
+#map-container {
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  height: 700px;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px;
+}
+#mapid, #map2 {
+  height: 500px;
 }
 #map2 {
   visibility: hidden;
@@ -25,8 +31,8 @@ span {
   font-size: 3em;
 }
 p {
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 15%;
+  margin-left:15%;
 }
 #gen, #acc {
   padding: 5px;
@@ -39,7 +45,7 @@ p {
   color: white;
 }
 #acc {
-  background-color: #e8e8e8;
+  background-color: #fff;
 }
 #genLegend, #accLegend {
   height: 100px;
@@ -53,7 +59,7 @@ p {
   width: 100px;
 }
 #stats {
-  margin-left: 5%;
+  margin-left: 15%;
 }
 .bigStat {
   font-size: 2em;
@@ -75,5 +81,5 @@ p {
   margin-bottom: 20px;
 }
 ul {
-  margin-left: 5%;
+  margin-left: 15%;
 }

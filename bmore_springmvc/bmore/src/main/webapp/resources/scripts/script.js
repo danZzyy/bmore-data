@@ -1,13 +1,16 @@
 var bikeLayer = []; //trails/lanes as line layer
 
 var tog = true;
+
+var mymap;
+var map2;
 // initializes Leaflet map
 // function called when body loads, otherwise Leaflet loads before the map div and fails to render
 function init(){
   grocLayer = groc_geoJSON.features;
 
-  var mymap = L.map('mapid').setView([39.30, -76.619], 12);
-  var map2 = L.map('map2').setView([39.30, -76.619], 12);
+  mymap = L.map('mapid').setView([39.30, -76.619], 12);
+  map2 = L.map('map2').setView([39.30, -76.619], 12);
 
   L.tileLayer('https://api.mapbox.com/styles/v1/dzadoroz/cirz64sz2003sg9kw8gpd8p2w/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -113,7 +116,7 @@ function toggleMap(){
     $mapGeneral.css('height', '0px');
     $genLegend.css('visibility', 'hidden');
     $genLegend.css('height', '0px');
-    $gen.css('background-color', '#e8e8e8');
+    $gen.css('background-color', '#fff');
     $gen.css('color', 'black');
 
     $mapAccess.css('visibility', 'visible');
@@ -135,9 +138,17 @@ function toggleMap(){
     $mapAccess.css('height', '0px');
     $accLegend.css('visibility', 'hidden');
     $accLegend.css('height', '0px');
-    $acc.css('background-color', '#e8e8e8');
+    $acc.css('background-color', '#fff');
     $acc.css('color', 'black');
   }
   tog = !tog;
 
+}
+
+//reset both maps to original center and zoom level
+function recenterMap(){
+	mymap.setView([39.30, -76.619], 12);
+	map2.setView([39.30, -76.619], 12);
+	
+	
 }

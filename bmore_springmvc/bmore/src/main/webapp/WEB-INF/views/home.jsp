@@ -34,92 +34,95 @@
       </header>
       <p><b>OVERVIEW</b></p>
       <p>In this project I will be looking at Baltimore City's geospatial data of bike paths/trails and grocery stores. I will determine what stores are accessible via bicycle and what the proportion is over the whole city.</p>
-      <div id="buttons">
-        <button id="toggle" type="button" onclick="toggleMap()">Toggle Map</button>
-        <span id="gen">General</span>
-        <span id="acc">Accessibility</span>
-      </div>
-      <div id="mapid"></div>
-      <div id="map2"></div>
-      <div id="genLegend">
-       <table class="legendTable">
-         <tr>
-           <td>
-             <div>
-               <span><svg height="30" width="40">
-                 <line x1="10" y1="25" x2="35" y2="25" style="stroke:#ed1a1a;stroke-width:3" />
-               </svg></span>
-               <span>Bike Lane </span>
-             </div>
-             <div>
-               <span><svg height="30" width="40">
-                 <line x1="10" y1="25" x2="35" y2="25" style="stroke:#357254;stroke-width:3" />
-               </svg></span>
-               <span>Trail</span>
-             </div>
-           </td>
-           <td>
-             <div class="spacing"></div>
-           </td>
-           <td>
-             <div>
-               <span><svg height="41" width="20">
-                 <circle cx="10" cy="30" r="8" stroke="black" stroke-width="1" fill="#0065ff" />
-               </svg></span>
-               <span>Full Grocery Store</span>
-             </div>
-             <div>
-               <span><svg height="35" width="20">
-                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="#66a0ff" />
-               </svg></span>
-               <span>Small Grocery Store</span>
-             </div>
-             <div>
-               <span><svg height="32" width="20">
-                 <circle cx="10" cy="25" r="4" stroke="black" stroke-width="1" fill="#d8e7ff" />
-               </svg></span>
-               <span>Limited Grocery Store</span>
-             </div>
-           </td>
-         </tr>
-       </table>
-     </div>
-     <div id="accLegend">
-       <table class="legendTable">
-         <tr>
-           <td>
-             <div>
-               <span><svg height="30" width="40">
-                 <line x1="10" y1="25" x2="35" y2="25" style="stroke:#0065ff;stroke-width:3" />
-               </svg></span>
-               <span>Bike Accessible Path </span>
-             </div>
-           </td>
-           <td>
-             <div class="spacing"></div>
-           </td>
-           <td>
-             <div>
-               <span><svg height="35" width="20">
-                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="green" />
-               </svg></span>
-               <span>Accessible</span>
-             </div>
-             <div>
-               <span><svg height="35" width="20">
-                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="yellow" />
-               </svg></span>
-               <span>Somewhat Accessible</span>
-             </div>
-             <div>
-               <span><svg height="35" width="20">
-                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="red" />
-               </svg></span>
-               <span>Not Aceessible</span>
-             </div>
-           </td>
-         </tr>
-       </table>
+      <div id="map-container">
+	      <div id="buttons">
+	        <button id="toggle" type="button" onclick="toggleMap()">Toggle Map</button>
+	        <span id="gen">General</span>
+	        <span id="acc">Accessibility</span>
+	        <button id="recenter" type="button" onclick="recenterMap()">Recenter Map</button>
+	      </div>
+	      <div id="mapid"></div>
+	      <div id="map2"></div>
+	      <div id="genLegend">
+	       <table class="legendTable">
+	         <tr>
+	           <td>
+	             <div>
+	               <span><svg height="30" width="40">
+	                 <line x1="10" y1="25" x2="35" y2="25" style="stroke:#ed1a1a;stroke-width:3" />
+	               </svg></span>
+	               <span>Bike Lane </span>
+	             </div>
+	             <div>
+	               <span><svg height="30" width="40">
+	                 <line x1="10" y1="25" x2="35" y2="25" style="stroke:#357254;stroke-width:3" />
+	               </svg></span>
+	               <span>Trail</span>
+	             </div>
+	           </td>
+	           <td>
+	             <div class="spacing"></div>
+	           </td>
+	           <td>
+	             <div>
+	               <span><svg height="41" width="20">
+	                 <circle cx="10" cy="30" r="8" stroke="black" stroke-width="1" fill="#0065ff" />
+	               </svg></span>
+	               <span>Full Grocery Store</span>
+	             </div>
+	             <div>
+	               <span><svg height="35" width="20">
+	                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="#66a0ff" />
+	               </svg></span>
+	               <span>Small Grocery Store</span>
+	             </div>
+	             <div>
+	               <span><svg height="32" width="20">
+	                 <circle cx="10" cy="25" r="4" stroke="black" stroke-width="1" fill="#d8e7ff" />
+	               </svg></span>
+	               <span>Limited Grocery Store</span>
+	             </div>
+	           </td>
+	         </tr>
+	       </table>
+	     </div>
+	     <div id="accLegend">
+	       <table class="legendTable">
+	         <tr>
+	           <td>
+	             <div>
+	               <span><svg height="30" width="40">
+	                 <line x1="10" y1="25" x2="35" y2="25" style="stroke:#0065ff;stroke-width:3" />
+	               </svg></span>
+	               <span>Bike Accessible Path </span>
+	             </div>
+	           </td>
+	           <td>
+	             <div class="spacing"></div>
+	           </td>
+	           <td>
+	             <div>
+	               <span><svg height="35" width="20">
+	                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="green" />
+	               </svg></span>
+	               <span>Accessible</span>
+	             </div>
+	             <div>
+	               <span><svg height="35" width="20">
+	                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="yellow" />
+	               </svg></span>
+	               <span>Somewhat Accessible</span>
+	             </div>
+	             <div>
+	               <span><svg height="35" width="20">
+	                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="red" />
+	               </svg></span>
+	               <span>Not Aceessible</span>
+	             </div>
+	           </td>
+	         </tr>
+	       </table>
+	     </div>
      </div>
      <br>
      <p>The accessibility values of the stores found in the Accessibility Map were created with a rating system I came up with. </p>

@@ -13,7 +13,7 @@ angular.module('locApp').factory('LocService', ['$http', '$q', function($http, $
 	return factory;
 	
 	function fetchAllLocs(){
-		var deferred = $q.defered();
+		var deferred = $q.defer();
 		$http.get(REST_SERVICE_URI).then(
 			function(response){
 				deferred.resolve(response.data);
@@ -28,7 +28,7 @@ angular.module('locApp').factory('LocService', ['$http', '$q', function($http, $
 	}
 	
 	function createLoc(loc){
-		var deferred = $q.defered();
+		var deferred = $q.defer();
 		$http.post(REST_SERVICE_URI, loc).then(
 			function(response){
 				deferred.resolve(response.data);
@@ -43,7 +43,7 @@ angular.module('locApp').factory('LocService', ['$http', '$q', function($http, $
 	}
 	
 	function updateLoc(loc, id){
-		var deferred = $q.defered();
+		var deferred = $q.defer();
 		$http.put(REST_SERVICE_URI+id, loc).then(
 			function(response){
 				deferred.resolve(response.data);
@@ -58,7 +58,7 @@ angular.module('locApp').factory('LocService', ['$http', '$q', function($http, $
 	}
 	
 	function deleteLoc(id){
-		var deferred = $q.defered();
+		var deferred = $q.defer();
 		$http.delete(REST_SERVICE_URI+id).then(
 			function(response){
 				deferred.resolve(response.data);

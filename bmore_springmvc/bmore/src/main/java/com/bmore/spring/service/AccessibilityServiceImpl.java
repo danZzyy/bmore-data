@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.bmore.spring.dao.Dao;
 import com.bmore.spring.model.Accessibility;
-import com.bmore.spring.model.Grocery;
 
 @Service("accessibilityService")
 public class AccessibilityServiceImpl implements AccessibilityService {

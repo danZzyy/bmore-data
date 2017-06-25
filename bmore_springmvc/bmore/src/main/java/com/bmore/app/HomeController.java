@@ -32,6 +32,7 @@ import com.bmore.spring.service.TrailService;
  * Handles requests for the application home page.
  */
 @Controller
+@RequestMapping("/")
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -88,6 +89,12 @@ public class HomeController {
 		
 		
 		return "home";
+	}
+	
+	@RequestMapping(value = "/loc/",  method = RequestMethod.GET)
+	public String loc(Model model){
+		
+		return "loc";
 	}
 	
 }

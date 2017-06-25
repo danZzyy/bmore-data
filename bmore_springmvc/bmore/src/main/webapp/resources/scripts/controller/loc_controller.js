@@ -14,7 +14,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	
 	//Following 4 functions interact with the LocService
 	function fetchAllLocs(){
-		LocService.fetchAllUsers().then(
+		LocService.fetchAllLocs().then(
 			function(d) {
 				self.locs = d;
 			},

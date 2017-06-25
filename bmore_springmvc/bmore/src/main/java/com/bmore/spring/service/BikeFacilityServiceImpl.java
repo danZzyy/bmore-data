@@ -14,6 +14,7 @@ public class BikeFacilityServiceImpl implements BikeFacilityService {
 
 	@Autowired
 	Dao dao;
+	
 	@Override
 	public void persist(BikeFacility a) {
 		dao.persist(a);

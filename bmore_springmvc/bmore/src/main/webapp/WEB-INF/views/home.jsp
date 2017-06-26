@@ -117,7 +117,7 @@
 	               <span><svg height="35" width="20">
 	                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="red" />
 	               </svg></span>
-	               <span>Not Aceessible</span>
+	               <span>Not Accessible</span>
 	             </div>
 	           </td>
 	         </tr>

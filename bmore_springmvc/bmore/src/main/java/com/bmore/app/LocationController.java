@@ -17,10 +17,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.bmore.spring.model.BikeFacility;
+import com.bmore.spring.model.CityLine;
 import com.bmore.spring.model.CustomLocation;
 import com.bmore.spring.model.FeatureCollection;
+import com.bmore.spring.model.Grocery;
+import com.bmore.spring.model.GroceryAccessibility;
+import com.bmore.spring.model.Trail;
 import com.bmore.spring.model.geoJSONable;
+import com.bmore.spring.service.BikeFacilityService;
+import com.bmore.spring.service.CityLineService;
 import com.bmore.spring.service.CustomLocService;
+import com.bmore.spring.service.GroceryAccessibilityService;
+import com.bmore.spring.service.TrailService;
 
 @RestController
 public class LocationController {
@@ -28,9 +37,65 @@ public class LocationController {
 	@Autowired
 	CustomLocService customLocService;
 	
-	// Retrieve All
+	@Autowired
+	GroceryAccessibilityService grocAccService;
+	
+	@Autowired
+	BikeFacilityService bikeFacilityService;
+	
+	@Autowired
+	TrailService trailService;
+	
+	@Autowired
+	CityLineService cityLineService;
+	
+	// retrieve all Grocery
+	@RequestMapping(value = "/groc/", method = RequestMethod.GET)
+	public ResponseEntity<List<GroceryAccessibility>> listAllGroc(){
+		ArrayList<GroceryAccessibility> grocs = (ArrayList<GroceryAccessibility>) grocAccService.getAll();
+		
+		if(grocs.isEmpty()){
+			return new ResponseEntity<List<GroceryAccessibility>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<GroceryAccessibility>>(grocs, HttpStatus.OK);
+	}
+	
+	// retrieve all BikeFacility
+	@RequestMapping(value = "/bike_fac/", method = RequestMethod.GET)
+	public ResponseEntity<List<BikeFacility>> listAllBike(){
+		ArrayList<BikeFacility> bikeFacs = (ArrayList<BikeFacility>) bikeFacilityService.getAll();
+		
+		if(bikeFacs.isEmpty()){
+			return new ResponseEntity<List<BikeFacility>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<BikeFacility>>(bikeFacs, HttpStatus.OK);
+	}
+	
+	// retrieve all Trail
+	@RequestMapping(value = "/trail/", method = RequestMethod.GET)
+	public ResponseEntity<List<Trail>> listAllTrail(){
+		ArrayList<Trail> trails = (ArrayList<Trail>) trailService.getAll();
+		
+		if(trails.isEmpty()){
+			return new ResponseEntity<List<Trail>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<Trail>>(trails, HttpStatus.OK);
+	}
+	
+	// retrieve all CityLine
+	@RequestMapping(value = "/city_line/", method = RequestMethod.GET)
+	public ResponseEntity<List<CityLine>> listAllCityLine(){
+		ArrayList<CityLine> cityLine = (ArrayList<CityLine>) cityLineService.getAll();
+		
+		if(cityLine.isEmpty()){
+			return new ResponseEntity<List<CityLine>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<CityLine>>(cityLine, HttpStatus.OK);
+	}
+	
+	// retrieve all CustomLocation
 	@RequestMapping(value = "/location/", method = RequestMethod.GET )
-	public ResponseEntity<List<CustomLocation>> listAll(){
+	public ResponseEntity<List<CustomLocation>> listAllLoc(){
 		ArrayList<CustomLocation> locs = (ArrayList<CustomLocation>) customLocService.findAll();
 		
 		if(locs.isEmpty()){

@@ -181,5 +181,6 @@
       <script src="<c:url value='/resources/scripts/service/loc_service.js' />"></script>
       <script src="<c:url value='/resources/scripts/controller/loc_controller.js' />"></script>
       <script src="<c:url value='/resources/scripts/locscript.js'/>"></script>
+      <script src="<c:url value='/resources/scripts/mapStyles.js'/>"></script>
   </body>
 </html>

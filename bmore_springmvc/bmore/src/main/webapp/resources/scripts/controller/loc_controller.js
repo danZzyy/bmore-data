@@ -1,5 +1,10 @@
 'use strict'
 
+var bike_fac;
+var groc;
+var trails;
+var city_line;
+
 angular.module('locApp').controller('LocController', ['$scope', 'LocService', function($scope, LocService){
 	var self = this;
 	self.loc = {id:null, name:'', address:'', lat:null, lng:null, accessibility:''};
@@ -11,6 +16,58 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	self.reset = reset;
 	
 	fetchAllLocs();
+	fetchBikeFacs();
+	fetchGrocs();
+	fetchTrails();
+	fetchCityLine();
+	
+	function fetchGrocs(){
+		LocService.fetchGrocs().then(
+			function(d) {
+				groc = d;
+			},
+			function(errResponse) {
+				console.error('Error fetching GroceryAccessibility');
+			}	
+		);
+		
+	}
+	
+	function fetchBikeFacs(){
+		LocService.fetchBikeFacs().then(
+			function(d) {
+				bike_fac = d;
+			},
+			function(errResponse) {
+				console.error('Error fetching BikeFacilities');
+			}	
+		);
+		
+	}
+	
+	function fetchTrails(){
+		LocService.fetchTrails().then(
+			function(d) {
+				trails = d;
+			},
+			function(errResponse) {
+				console.error('Error fetching Trails');
+			}	
+		);
+		
+	}
+	
+	function fetchCityLine(){
+		LocService.fetchCityLine().then(
+			function(d) {
+				city_line = d;
+			},
+			function(errResponse) {
+				console.error('Error fetching CityLine');
+			}	
+		);
+		
+	}
 	
 	//Following 4 functions interact with the LocService
 	function fetchAllLocs(){

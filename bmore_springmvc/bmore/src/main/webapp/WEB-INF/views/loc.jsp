@@ -177,6 +177,7 @@
    	  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
   crossorigin=""></script>
+  	  <script src="<c:url value='/resources/scripts/geoJSONutils.js' />"></script>
       <script src="<c:url value='/resources/scripts/app.js' />"></script>
       <script src="<c:url value='/resources/scripts/service/loc_service.js' />"></script>
       <script src="<c:url value='/resources/scripts/controller/loc_controller.js' />"></script>

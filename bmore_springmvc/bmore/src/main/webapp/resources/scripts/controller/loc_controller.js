@@ -24,7 +24,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	function fetchGrocs(){
 		LocService.fetchGrocs().then(
 			function(d) {
-				groc = d;
+				groc = convertGrocs(d);
 			},
 			function(errResponse) {
 				console.error('Error fetching GroceryAccessibility');
@@ -36,7 +36,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	function fetchBikeFacs(){
 		LocService.fetchBikeFacs().then(
 			function(d) {
-				bike_fac = d;
+				bike_fac = convertMultiLineString(d);
 			},
 			function(errResponse) {
 				console.error('Error fetching BikeFacilities');
@@ -48,7 +48,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	function fetchTrails(){
 		LocService.fetchTrails().then(
 			function(d) {
-				trails = d;
+				trails = convertMultiLineString(d);
 			},
 			function(errResponse) {
 				console.error('Error fetching Trails');
@@ -60,7 +60,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	function fetchCityLine(){
 		LocService.fetchCityLine().then(
 			function(d) {
-				city_line = d;
+				city_line = convertMultiLineString(d);
 			},
 			function(errResponse) {
 				console.error('Error fetching CityLine');

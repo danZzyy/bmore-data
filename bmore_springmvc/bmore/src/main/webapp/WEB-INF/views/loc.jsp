@@ -35,7 +35,10 @@
 		                              </div>
 		                      </div>
 		                      <br>   
-		                       
+		                      <div class="smalltext">
+		                      Search for an address in Baltimore then click <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> to see it on the map. To cancel, click X or type in a new address.
+		                      <br><br>
+		                      </div>
 		                      <div class="row">
 		                              <label class="col-md-2 control-lable" for="address">Address</label>
 		                              <div class="col-md-7">
@@ -76,6 +79,7 @@
                   <table class="table table-hover">
                       <thead>
                           <tr>
+                          	  <th></th>
                               <th>Name</th>
                               <th>Address</th>
                               <th>Lat</th>
@@ -86,6 +90,11 @@
                       </thead>
                       <tbody>
                           <tr class="tblrow" ng-repeat="l in ctrl.locs">
+                          	  <td>
+                          	  	<button class="btn btn-primary" type="button" ng-click="ctrl.moveToPoint(l.id)">
+									<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+								</button>
+                          	  </td>
                               <td><span ng-bind="l.name"></span></td>
                               <td><span ng-bind="l.address"></span></td>
                               <td><span ng-bind="l.lat"></span></td>
@@ -113,7 +122,8 @@
   crossorigin=""></script>
   	  <script src='https://npmcdn.com/@turf/turf@4.3.1/turf.min.js'></script>
   	  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-	<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+	  <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+	  <script src="<c:url value='/resources/scripts/lib/leafletsvg.min.js' />"></script>
   	  <script src="<c:url value='/resources/scripts/geoJSONutils.js' />"></script>
       <script src="<c:url value='/resources/scripts/app.js' />"></script>
       <script src="<c:url value='/resources/scripts/service/loc_service.js' />"></script>

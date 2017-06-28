@@ -8,6 +8,7 @@
       
       var bikepaths = [];
       
+      // intialize map after html loads
       function init(){
     	  geocoder = new google.maps.Geocoder();
     	  map = L.map('map').setView([39.30, -76.619], 12);
@@ -21,6 +22,7 @@
     	  
       }
       
+      // load Bmore data into map
       function populateMap(){
     	  //render city border
     	  city_line.features.forEach(function(feature){
@@ -38,7 +40,7 @@
     	    bikepaths.push(feature);
     	  });
     	  
-    	  /*
+    	  
     	  groc.features.forEach(function(feature){
     		    // first map
     		    var popupText = "<b>" + feature.properties.name + "</b><br>" + feature.properties.store_type + "<br>Accessibility: " + feature.properties.accessibility + "<br>" + feature.properties.address ;
@@ -58,14 +60,12 @@
     		    }).addTo(map);
     		    accMarker.bindPopup(popupText);
     	  });
-    	  */
       }
       
+      // use Google's geocoder to get coordinates from valid street address
       function geocodeAddress(){
-    	  
     	  var addr = $('#address').val();
     	  var $addressResults = $('#addressResults');
-    	  //render standby message
     	  
     	  //google's geocoder takes address and spits out coordinates if found
     	  geocoder.geocode({address: addr}, function(results, status){
@@ -95,7 +95,7 @@
     	  return feature;
       }
       
-      //input geoJSON point
+      // input geoJSON point
       function getAcc(f){
     	  var quarterMile = turf.buffer(f, 0.25, "miles");
     	  var halfMile = turf.buffer(f, 0.5, "miles");
@@ -112,6 +112,7 @@
     	  return f;
       }
       
+      // plot point from geocoding
       function addToMap(lat, lng, addr){
     	  var featureGeoJSON = getAcc(toGeoJSON(lng, lat, addr));
     	  currentLoc.lat = lat;
@@ -122,23 +123,16 @@
     	    	  
     	    	currentLoc.accessibility = f.properties.accessibility;
     	    	
-	    	  	if(f.properties.accessibility == "YES") {
-	              return L.circleMarker(latlng);
-	            }
-	            else if(f.properties.accessibility == "SOMEWHAT") {
-	              return L.circleMarker(latlng);
-	            }
-	            else {
-	              return L.circleMarker(latlng);
-	            }
+	    	  	return L.marker(latlng);
     	      }
     	  }).addTo(map);
     	  
     	  map.setView([lat, lng], 14);
-    	  $('#addressResults').html(addr + " accessibility is " + featureGeoJSON.properties.accessibility);
+    	  //$('#addressResults').html(addr + " accessibility is " + featureGeoJSON.properties.accessibility);
     	  
       }
       
+      // removes form point from map
       function removePoint(){
     	  if(currentPt != null){
     		  map.removeLayer(currentPt);
@@ -148,6 +142,7 @@
     	  }
       }
       
+      // render pie chart with current data
       function updateChart(){
     	  AmCharts.makeChart("piechart", {
     		  "type": "pie",

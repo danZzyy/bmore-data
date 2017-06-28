@@ -70,3 +70,30 @@ var noMarkerOptions = {
   opacity: 1,
   fillOpacity: 0.9
 };
+var yesLocOptions = {
+   shape: "diamond",
+   radius: 6,
+   fillColor: "green",
+   color: "black",
+   weight: 1,
+   opacity: 1,
+   fillOpacity: 0.9
+};
+var somewhatLocOptions = {
+	shape: "diamond",
+    radius: 6,
+    fillColor: "yellow",
+    color: "black",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.9
+};
+var noLocOptions = {
+	shape: "diamond",
+  radius: 6,
+  fillColor: "red",
+  color: "black",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.9
+};

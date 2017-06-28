@@ -1,7 +1,9 @@
 package com.bmore.spring.dao;
 
 import java.util.List;
-
+/*
+ * A CRUD DAO used only got CustomLocation objects in this app
+ */
 public interface CustomLocDao {
 
 	public void persist(Object loc);

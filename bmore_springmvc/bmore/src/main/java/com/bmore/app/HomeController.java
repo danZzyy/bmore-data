@@ -35,8 +35,6 @@ import com.bmore.spring.service.TrailService;
 @RequestMapping("/")
 public class HomeController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
 	@Autowired
 	GroceryAccessibilityService grocAccService;
 	
@@ -86,11 +84,11 @@ public class HomeController {
 				
 		model.addAttribute("trails", trailsFeatureCollection.toJSON());
 		
-		
-		
 		return "home";
 	}
 	
+	
+	//Takes you to the jsp template for the Angular app
 	@RequestMapping(value = "/loc/",  method = RequestMethod.GET)
 	public String loc(Model model){
 		

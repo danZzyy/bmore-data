@@ -10,6 +10,7 @@ var accCount = {
 		"SOMEWHAT": 0
 };
 var locPts = {};
+var locLeafletObjs = {};
 
 angular.module('locApp').controller('LocController', ['$scope', 'LocService', function($scope, LocService){
 	var self = this;
@@ -20,6 +21,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	self.edit = edit;
 	self.remove = remove;
 	self.reset = reset;
+	self.moveToPoint = moveToPoint;
 	
 	fetchAllLocs();
 	fetchGrocs();
@@ -110,7 +112,9 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	}
 	
 	function deleteLoc(id){
-		map.removeLayer(locPts[id]);
+		map.removeLayer(locLeafletObjs[id]);
+		delete locLeafletObjs[id];
+		delete locObjs[id];
 		LocService.deleteLoc(id).then(
 			fetchAllLocs,
 			function(errResponse){
@@ -122,6 +126,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	//Following 4 functions respond to user actions from the locForm
 	function submit(){
 		currentLoc.name = $('#lname').val();
+		removePoint();
 		if(currentLoc.id !== null){
 			updateLoc(currentLoc, currentLoc.id);
 			console.log('Updated with id ', currentLoc.id);
@@ -182,23 +187,28 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	function plotLocs(){
 		self.locs.forEach(function(l){
 			var locGeoJSON = locToGeoJSON(l);
-			if(locPts[l.id]){
-				map.removeLayer(locPts[l.id]); //remove old marker
+			if(locLeafletObjs[l.id]){
+				map.removeLayer(locLeafletObjs[l.id]); //remove old marker
 			}
-			locPts[l.id] = L.geoJSON(locGeoJSON, {
+			locPts[l.id] = locGeoJSON.geometry.coordinates;
+			locLeafletObjs[l.id] = L.geoJSON(locGeoJSON, {
 	    	      pointToLayer: function (f, latlng) {
 	    	    	if(f.properties.accessibility == "YES") {
-    		          return L.circleMarker(latlng, yesMarkerOptions);
+    		          return L.shapeMarker(latlng, yesLocOptions);
     		        }
     		        else if(f.properties.accessibility == "SOMEWHAT") {
-    		          return L.circleMarker(latlng, somewhatMarkerOptions);
+    		          return L.shapeMarker(latlng, somewhatLocOptions);
     		        }
     		        else {
-    		          return L.circleMarker(latlng, noMarkerOptions);
+    		          return L.shapeMarker(latlng, noLocOptions);
     		        }
 	    	      }
 	    	  }).addTo(map);
 		});
+	}
+	
+	function moveToPoint(id){
+		map.setView([locPts[id][1], locPts[id][0]], 15);	
 	}
 	
 	function calculateAcc(){

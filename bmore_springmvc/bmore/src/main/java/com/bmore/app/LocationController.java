@@ -139,12 +139,8 @@ public class LocationController {
 		if(toUpdate == null){
 			return new ResponseEntity<CustomLocation>(HttpStatus.NOT_FOUND);
 		}
-		toUpdate.setAddress(loc.getAddress());
-		toUpdate.setName(loc.getName());
-		toUpdate.setLat(loc.getLat());
-		toUpdate.setLng(loc.getLng());
-		toUpdate.setAccessibility(loc.getAccessibility());
-		customLocService.updateLoc(toUpdate);
+		
+		customLocService.updateLoc(loc);
 		
 		return new ResponseEntity<CustomLocation>(toUpdate, HttpStatus.OK);
 	}

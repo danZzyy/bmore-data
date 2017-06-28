@@ -150,6 +150,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	
 	function reset(){
 		self.loc = {id:null, name:'', address:'', lat:null, lng:null, accessibility:''};
+		currentLoc = self.loc;
 		$scope.locForm.$setPristine(); //reset locForm
 	}
 }]);

@@ -43,7 +43,7 @@ public class CustomLocDaoImpl implements CustomLocDao {
 	@Override
 	@Transactional
 	public void update(Object loc) {
-		em.persist(loc);
+		em.merge(loc);
 	}
 
 }

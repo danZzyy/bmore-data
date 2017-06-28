@@ -13,6 +13,7 @@ To run this app you will need:
 3. In `bmore-data/bmore_springmvc/bmore/` , notice that pom.xml and run `mvn compile`. This will install all the libraries and dependencies the Spring MVC Java backend uses
 4. `mvn tomcat:run` will start the server
 5. Now that the server is running the main webpage can be found at `http://localhost:8080/app/loc/`
+  * NOTE: The map appears not to render on page load sometimes, in which case opening the browser inspector fixes it
 
 `http://localhost:8080/app/loc/`
 This is the webpage of the Angular CRUD application

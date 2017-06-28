@@ -114,7 +114,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	function deleteLoc(id){
 		map.removeLayer(locLeafletObjs[id]);
 		delete locLeafletObjs[id];
-		delete locObjs[id];
+		delete locPts[id];
 		LocService.deleteLoc(id).then(
 			fetchAllLocs,
 			function(errResponse){

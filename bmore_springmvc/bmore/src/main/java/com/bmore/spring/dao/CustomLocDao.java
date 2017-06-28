@@ -10,7 +10,7 @@ public interface CustomLocDao {
 	
 	public Object getById(int id);
 	
-	public void deleteById(int id);
+	public void deleteItem(Object loc);
 	
 	public void update(Object loc);
 	

@@ -10,13 +10,14 @@ function convertGrocs(objectArray){
 		var feature = { "type": "Feature",
 	        "geometry":{
 	          "type": "Point",
-	          "coordinates": [f.grocery.lat, f.grocery.lng]
+	          "coordinates": [f.grocery.lng, f.grocery.lat]
 	        },
 	        "properties": {
 	          "id": f.grocery.grocId,
 	          "name": f.grocery.name,
 	          "address": f.grocery.address,
-	          "store_type": f.grocery.type.type
+	          "store_type": f.grocery.type.type,
+	          "accessibility": f.accessibility.accessibility
 	        }
 	      };
 		featureCollection.features.push(feature);

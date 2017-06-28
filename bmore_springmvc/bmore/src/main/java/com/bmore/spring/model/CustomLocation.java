@@ -1,9 +1,13 @@
 package com.bmore.spring.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -14,9 +18,15 @@ import org.json.simple.JSONObject;
 
 @Entity(name="custom_location")
 @Table(name="custom_location")
-public class CustomLocation implements geoJSONable {
+public class CustomLocation implements geoJSONable, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6531376693976340794L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
 	private String address;
@@ -27,7 +37,7 @@ public class CustomLocation implements geoJSONable {
 	
 	private double lng;
 	
-	private int accessibility;
+	private String accessibility;
 	
 	@Override
 	public String toJSON() {
@@ -96,11 +106,11 @@ public class CustomLocation implements geoJSONable {
 		this.lng = lng;
 	}
 
-	public int getAccessibility() {
+	public String getAccessibility() {
 		return accessibility;
 	}
 
-	public void setAccessibility(int accessibility) {
+	public void setAccessibility(String accessibility) {
 		this.accessibility = accessibility;
 	}
 

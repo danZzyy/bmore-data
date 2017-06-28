@@ -9,7 +9,7 @@
     	margin-left: 15%;
     }
     #map{
-    	width: 600px;
+    	width: 650px;
     	height: 500px;
     	margin-right: 10px;
     	border-radius: 10px;
@@ -41,10 +41,6 @@
       .email.ng-dirty.ng-invalid-email {
           background-color: yellow;
       }
-      
-      #address{
-      	width: 200px;
-      }
  
  	header{
 	  text-align: center;
@@ -66,6 +62,12 @@
 	#coorBtn{
 		color: red;
 		font-size: 12pt;
+	}
+	#coorBtn, #removePtButton, #address{
+		height: 34px;
+	}
+	#address, #lname{
+		width: 100%;
 	}
 	#formTitle{
 		text-align: center;
@@ -91,7 +93,7 @@
               		</td>
               		<td class="formcontainer" valign="top">
               			<div>
-              				<div id="formTitle">Bike Accessibility</div>
+              				<div id="formTitle">Bike Accessibility</div><br>
               				<p>Find out the bike accessibility of your favorite places in Baltimore! Then save them and revisit them!</p>
               				<br>
              				<form ng-submit="ctrl.submit()" id="locFrom" name="locForm" class="form-horizontal">
@@ -126,7 +128,7 @@
 		                      <div class="row">
 		                          <div class="form-actions floatRight">
 		                              <input type="submit"  value="{{!ctrl.loc.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="locForm.$invalid">
-		                              <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="locForm.$pristine">Reset Form</button>
+		                              <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" >Reset Form</button>
 		                          </div>
 		                      </div>
 		                      <br>
@@ -177,6 +179,7 @@
    	  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
   crossorigin=""></script>
+  	  <script src='https://npmcdn.com/@turf/turf@4.3.1/turf.min.js'></script>
   	  <script src="<c:url value='/resources/scripts/geoJSONutils.js' />"></script>
       <script src="<c:url value='/resources/scripts/app.js' />"></script>
       <script src="<c:url value='/resources/scripts/service/loc_service.js' />"></script>

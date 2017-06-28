@@ -134,19 +134,29 @@ public class LocationController {
 	
 	// Update Item
 	@RequestMapping(value = "/location/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<List<CustomLocation>> updateItem(@PathVariable("id") int id){
-		return null;
+	public ResponseEntity<CustomLocation> updateItem(@PathVariable("id") int id, @RequestBody CustomLocation loc){
+		CustomLocation toUpdate = customLocService.findById(id);;
+		if(toUpdate == null){
+			return new ResponseEntity<CustomLocation>(HttpStatus.NOT_FOUND);
+		}
+		toUpdate.setAddress(loc.getAddress());
+		toUpdate.setName(loc.getName());
+		toUpdate.setLat(loc.getLat());
+		toUpdate.setLng(loc.getLng());
+		toUpdate.setAccessibility(loc.getAccessibility());
+		customLocService.updateLoc(toUpdate);
+		
+		return new ResponseEntity<CustomLocation>(toUpdate, HttpStatus.OK);
 	}
 	
 	// Delete Item
 	@RequestMapping(value = "/location/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<List<CustomLocation>> deleteItem(@PathVariable("id") int id){
-		return null;
-	}
-	
-	// Delete All
-	@RequestMapping(value = "/location/", method = RequestMethod.DELETE)
-	public ResponseEntity<List<CustomLocation>> deleteAll(){
-		return null;
+	public ResponseEntity<CustomLocation> deleteItem(@PathVariable("id") int id){
+		CustomLocation toDelete = customLocService.findById(id);;
+		if(toDelete == null){
+			return new ResponseEntity<CustomLocation>(HttpStatus.NOT_FOUND);
+		}
+		customLocService.deleteItem(toDelete);
+		return new ResponseEntity<CustomLocation>(HttpStatus.OK);
 	}
 }

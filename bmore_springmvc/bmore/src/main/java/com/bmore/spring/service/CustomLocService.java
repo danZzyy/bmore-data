@@ -12,7 +12,7 @@ public interface CustomLocService {
 	
 	void updateLoc(CustomLocation loc);
 	
-	void deleteById(int id);
+	void deleteItem(CustomLocation loc);
 	
 	List<CustomLocation> findAll();
 	

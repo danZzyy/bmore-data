@@ -16,15 +16,13 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	self.reset = reset;
 	
 	fetchAllLocs();
-	fetchBikeFacs();
 	fetchGrocs();
-	fetchTrails();
-	fetchCityLine();
 	
 	function fetchGrocs(){
 		LocService.fetchGrocs().then(
 			function(d) {
 				groc = convertGrocs(d);
+				fetchBikeFacs();
 			},
 			function(errResponse) {
 				console.error('Error fetching GroceryAccessibility');
@@ -37,6 +35,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 		LocService.fetchBikeFacs().then(
 			function(d) {
 				bike_fac = convertMultiLineString(d);
+				fetchTrails();
 			},
 			function(errResponse) {
 				console.error('Error fetching BikeFacilities');
@@ -49,6 +48,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 		LocService.fetchTrails().then(
 			function(d) {
 				trails = convertMultiLineString(d);
+				fetchCityLine();
 			},
 			function(errResponse) {
 				console.error('Error fetching Trails');
@@ -61,6 +61,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 		LocService.fetchCityLine().then(
 			function(d) {
 				city_line = convertMultiLineString(d);
+				populateMap();
 			},
 			function(errResponse) {
 				console.error('Error fetching CityLine');
@@ -110,22 +111,27 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	
 	//Following 4 functions respond to user actions from the locForm
 	function submit(){
-		if(self.loc.id === null){
-			console.log('Saving New CustomLocation', self.loc);
-			createLoc(self.loc);
+		currentLoc.name = $('#lname').val();
+		if(currentLoc.id !== null){
+			updateLoc(currentLoc, currentLoc.id);
+			console.log('Updated with id ', currentLoc.id);
 		}
+	
 		else{
-			updateLoc(self.loc, self.loc.id);
-			console.log('Updated with id ', self.loc.id);
+			delete currentLoc.id; // null id interferes with db id generation
+			console.log('Saving New CustomLocation', currentLoc);
+			createLoc(currentLoc);
 		}
+		
 		reset();
 	}
 	
 	function edit(id){
 		console.log('id to be edited', id);
-		for(var i = 0; i < self.locs.legth; i++){
+		for(var i = 0; i < self.locs.length; i++){
 			if(self.locs[i].id === id){
 				self.loc = angular.copy(self.locs[i]);
+				currentLoc = self.loc;
 				break;
 			}
 		}
@@ -133,11 +139,13 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	
 	function remove(id){
 		console.log('id to be deleted ', id);
-		if(self.loc.id === id){
-			//reset locForm
-			reset();
+		if(confirm('Delete?')){
+			if(self.loc.id === id){
+				//reset locForm
+				reset();
+			}
+			deleteLoc(id);
 		}
-		deleteLoc(id);
 	}
 	
 	function reset(){

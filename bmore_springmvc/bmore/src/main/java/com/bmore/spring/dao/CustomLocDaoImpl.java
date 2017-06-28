@@ -7,6 +7,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.bmore.spring.model.CustomLocation;
 
@@ -17,6 +18,7 @@ public class CustomLocDaoImpl implements CustomLocDao {
 	private EntityManager em;
 	
 	@Override
+	@Transactional
 	public void persist(Object loc) {
 		em.persist(loc);
 	}
@@ -33,23 +35,15 @@ public class CustomLocDaoImpl implements CustomLocDao {
 	}
 
 	@Override
-	public void deleteById(int id) {
-		CustomLocation toDelete = em.find(CustomLocation.class, id);
-		em.remove(toDelete);
+	@Transactional
+	public void deleteItem(Object loc) {
+		em.remove(em.getReference(CustomLocation.class, ((CustomLocation) loc).getId()));
 	}
 
 	@Override
+	@Transactional
 	public void update(Object loc) {
-		CustomLocation toUpdate = (CustomLocation) em.find(CustomLocation.class, ((CustomLocation) loc).getId());
-		if(toUpdate != null){
-			CustomLocation CLoc = (CustomLocation) loc;
-			toUpdate.setAddress(CLoc.getAddress());
-			toUpdate.setAccessibility(CLoc.getAccessibility());
-			toUpdate.setName(CLoc.getName());
-			toUpdate.setLat(CLoc.getLat());
-			toUpdate.setLng(CLoc.getLng());
-			em.persist(toUpdate);
-		}
+		em.persist(loc);
 	}
 
 }

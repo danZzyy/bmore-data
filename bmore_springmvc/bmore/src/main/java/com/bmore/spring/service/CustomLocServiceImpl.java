@@ -30,8 +30,8 @@ public class CustomLocServiceImpl implements CustomLocService {
 	}
 
 	@Override
-	public void deleteById(int id) {
-		CLDao.deleteById(id);
+	public void deleteItem(CustomLocation loc) {
+		CLDao.deleteItem(loc);
 	}
 
 	@Override

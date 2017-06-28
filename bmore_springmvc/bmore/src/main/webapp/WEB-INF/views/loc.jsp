@@ -3,78 +3,8 @@
 <html>
   <head>  
     <title>Custom Location App</title>  
-    <style>
-    .panel-heading, .tablecontainer, #mapformContainer{
-    	margin-right: 15%;
-    	margin-left: 15%;
-    }
-    #map{
-    	width: 650px;
-    	height: 500px;
-    	margin-right: 10px;
-    	border-radius: 10px;
-    }
-    label{
-    	margin-right: 20px;
-    }
-    .formcontainer{
-    	background-color: #eee;
-    	border-radius: 10px;
-    	padding: 20px;
-    }
-      .username.ng-valid {
-          background-color: lightgreen;
-      }
-      .username.ng-dirty.ng-invalid-required {
-          background-color: red;
-      }
-      .username.ng-dirty.ng-invalid-minlength {
-          background-color: yellow;
-      }
- 
-      .email.ng-valid {
-          background-color: lightgreen;
-      }
-      .email.ng-dirty.ng-invalid-required {
-          background-color: red;
-      }
-      .email.ng-dirty.ng-invalid-email {
-          background-color: yellow;
-      }
- 
- 	header{
-	  text-align: center;
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	  margin-top: 10px;
-	  margin-bottom: 20px;
-	}
-	.bike {
-	  height: 40px;
-	}
-	#title {
-	  font-size: 3em;
-	}
-	span {
-	  display: inline;
-	}
-	#coorBtn{
-		color: red;
-		font-size: 12pt;
-	}
-	#coorBtn, #removePtButton, #address{
-		height: 34px;
-	}
-	#address, #lname{
-		width: 100%;
-	}
-	#formTitle{
-		text-align: center;
-		font-size: 2em;
-	}
-    </style>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <link rel="stylesheet" href="<c:url value='/resources/css/loc.css' />">
   </head>
   <body ng-app="locApp" class="ng-cloak" onload="init()">
   	<header>
@@ -146,23 +76,24 @@
                   <table class="table table-hover">
                       <thead>
                           <tr>
-                              <th>ID.</th>
                               <th>Name</th>
                               <th>Address</th>
                               <th>Lat</th>
                               <th>Lng</th>
+                              <th>Accessible?</th>
                               <th width="20%"></th>
                           </tr>
                       </thead>
                       <tbody>
-                          <tr ng-repeat="l in ctrl.locs">
-                              <td><span ng-bind="l.id"></span></td>
+                          <tr class="tblrow" ng-repeat="l in ctrl.locs">
                               <td><span ng-bind="l.name"></span></td>
                               <td><span ng-bind="l.address"></span></td>
                               <td><span ng-bind="l.lat"></span></td>
                               <td><span ng-bind="l.lng"></span></td>
+                              <td><span ng-bind="l.accessibility"></span></td>
                               <td>
-                              <button type="button" ng-click="ctrl.edit(l.id)" class="btn btn-success custom-width">Edit</button>  <button type="button" ng-click="ctrl.remove(l.id)" class="btn btn-danger custom-width">Remove</button>
+	                              <button type="button" ng-click="ctrl.edit(l.id)" class="btn btn-success custom-width"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>  
+	                              <button type="button" ng-click="ctrl.remove(l.id)" class="btn btn-danger custom-width"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
                               </td>
                           </tr>
                       </tbody>
@@ -170,6 +101,7 @@
               </div>
           </div>
       </div>
+      <div id="piechart"></div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
       <script src="http://maps.google.com/maps/api/js?key=AIzaSyBqM1JuISJ7mUM_3cGk5VwgXGX-sW6JCno"></script>
@@ -180,6 +112,8 @@
   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
   crossorigin=""></script>
   	  <script src='https://npmcdn.com/@turf/turf@4.3.1/turf.min.js'></script>
+  	  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="https://www.amcharts.com/lib/3/pie.js"></script>
   	  <script src="<c:url value='/resources/scripts/geoJSONutils.js' />"></script>
       <script src="<c:url value='/resources/scripts/app.js' />"></script>
       <script src="<c:url value='/resources/scripts/service/loc_service.js' />"></script>

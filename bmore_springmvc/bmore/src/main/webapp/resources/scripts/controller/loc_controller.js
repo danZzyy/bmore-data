@@ -4,6 +4,12 @@ var bike_fac;
 var groc;
 var trails;
 var city_line;
+var accCount = {
+		"YES": 0,
+		"NO": 0,
+		"SOMEWHAT": 0
+};
+var locPts = {};
 
 angular.module('locApp').controller('LocController', ['$scope', 'LocService', function($scope, LocService){
 	var self = this;
@@ -75,6 +81,9 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 		LocService.fetchAllLocs().then(
 			function(d) {
 				self.locs = d;
+				calculateAcc();
+				updateChart();
+				plotLocs();
 			},
 			function(errResponse) {
 				console.error('Error fetching CustomLocations');
@@ -101,6 +110,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	}
 	
 	function deleteLoc(id){
+		map.removeLayer(locPts[id]);
 		LocService.deleteLoc(id).then(
 			fetchAllLocs,
 			function(errResponse){
@@ -152,5 +162,53 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 		self.loc = {id:null, name:'', address:'', lat:null, lng:null, accessibility:''};
 		currentLoc = self.loc;
 		$scope.locForm.$setPristine(); //reset locForm
+	}
+	
+	 function locToGeoJSON(loc){
+   	  var feature = { "type": "Feature",
+                 "geometry":{
+                   "type": "Point",
+                   "coordinates": [loc.lng, loc.lat]
+                 },
+                 "properties": {
+               	"name": loc.name,
+                   "address": loc.address,
+                   "accessibility": loc.accessibility
+                 }
+               };
+   	  return feature;
+     }
+	
+	function plotLocs(){
+		self.locs.forEach(function(l){
+			var locGeoJSON = locToGeoJSON(l);
+			if(locPts[l.id]){
+				map.removeLayer(locPts[l.id]); //remove old marker
+			}
+			locPts[l.id] = L.geoJSON(locGeoJSON, {
+	    	      pointToLayer: function (f, latlng) {
+	    	    	if(f.properties.accessibility == "YES") {
+    		          return L.circleMarker(latlng, yesMarkerOptions);
+    		        }
+    		        else if(f.properties.accessibility == "SOMEWHAT") {
+    		          return L.circleMarker(latlng, somewhatMarkerOptions);
+    		        }
+    		        else {
+    		          return L.circleMarker(latlng, noMarkerOptions);
+    		        }
+	    	      }
+	    	  }).addTo(map);
+		});
+	}
+	
+	function calculateAcc(){
+		accCount = {
+				"YES": 0,
+				"NO": 0,
+				"SOMEWHAT": 0
+		};
+		self.locs.forEach(function(l){
+			accCount[l.accessibility] ++;
+		});
 	}
 }]);

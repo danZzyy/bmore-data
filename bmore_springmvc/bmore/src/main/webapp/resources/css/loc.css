@@ -1,0 +1,76 @@
+.panel-heading, .tablecontainer, #mapformContainer{
+	margin-right: 15%;
+	margin-left: 15%;
+}
+#map{
+	width: 650px;
+	height: 500px;
+	margin-right: 10px;
+	border-radius: 10px;
+}
+label{
+	margin-right: 20px;
+}
+.formcontainer{
+   	background-color: #eee;
+   	border-radius: 10px;
+   	padding: 20px;
+   }
+.username.ng-valid {
+    background-color: lightgreen;
+}
+.username.ng-dirty.ng-invalid-required {
+    background-color: red;
+}
+.username.ng-dirty.ng-invalid-minlength {
+    background-color: yellow;
+}
+
+.email.ng-valid {
+    background-color: lightgreen;
+}
+.email.ng-dirty.ng-invalid-required {
+    background-color: red;
+}
+.email.ng-dirty.ng-invalid-email {
+    background-color: yellow;
+}
+
+header{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.bike {
+  height: 40px;
+}
+#title {
+  font-size: 3em;
+}
+span {
+  display: inline;
+}
+#coorBtn{
+	color: red;
+	font-size: 12pt;
+}
+#coorBtn, #removePtButton, #address{
+	height: 34px;
+}
+#address, #lname{
+	width: 100%;
+}
+#formTitle{
+	text-align: center;
+	font-size: 2em;
+}
+.tblrow{
+	font-size: .8em;
+}
+#piechart{
+	height: 300px;
+	width: 100%;
+}

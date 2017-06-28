@@ -38,6 +38,7 @@
     	    bikepaths.push(feature);
     	  });
     	  
+    	  /*
     	  groc.features.forEach(function(feature){
     		    // first map
     		    var popupText = "<b>" + feature.properties.name + "</b><br>" + feature.properties.store_type + "<br>Accessibility: " + feature.properties.accessibility + "<br>" + feature.properties.address ;
@@ -57,6 +58,7 @@
     		    }).addTo(map);
     		    accMarker.bindPopup(popupText);
     	  });
+    	  */
       }
       
       function geocodeAddress(){
@@ -121,13 +123,13 @@
     	    	currentLoc.accessibility = f.properties.accessibility;
     	    	
 	    	  	if(f.properties.accessibility == "YES") {
-	              return L.circleMarker(latlng, yesMarkerOptions);
+	              return L.circleMarker(latlng);
 	            }
 	            else if(f.properties.accessibility == "SOMEWHAT") {
-	              return L.circleMarker(latlng, somewhatMarkerOptions);
+	              return L.circleMarker(latlng);
 	            }
 	            else {
-	              return L.circleMarker(latlng, noMarkerOptions);
+	              return L.circleMarker(latlng);
 	            }
     	      }
     	  }).addTo(map);
@@ -146,6 +148,34 @@
     	  }
       }
       
+      function updateChart(){
+    	  AmCharts.makeChart("piechart", {
+    		  "type": "pie",
+    		  "dataProvider": [{
+    		    "accessibility": "Accessible",
+    		    "count": accCount["YES"],
+    		    "color": "green"
+    		  },
+    		  {
+      		    "accessibility": "Somewhat Accessible",
+      		    "count": accCount["SOMEWHAT"],
+      		    "color": "yellow"
+      		  },
+      		{
+      		    "accessibility": "Not Accessible",
+      		    "count": accCount["NO"],
+      		    "color": "red"
+      		  }],
+	      	  "valueField": "count",
+	      	  "titleField": "accessibility",
+	      	  "colorField": "color",
+	      	  "labelColorField": "color",
+	      	  "balloon": {
+	      	    "fixedPosition": true
+      	  		}
+    	  });
+      }
+    	  
       function resetCurrentLoc(){
     	  currentLoc = {id:null, name:'', address:'', lat:null, lng:null, accessibility:''};  
       }

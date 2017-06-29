@@ -127,7 +127,6 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 	//Following 4 functions respond to user actions from the locForm
 	function submit(){
 		currentLoc.name = $('#lname').val();
-		removePoint();
 		if(currentLoc.id !== null){
 			updateLoc(currentLoc, currentLoc.id);
 			console.log('Updated with id ', currentLoc.id);
@@ -138,6 +137,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 			console.log('Saving New CustomLocation', currentLoc);
 			createLoc(currentLoc);
 		}
+		removePoint();
 		
 		reset();
 	}

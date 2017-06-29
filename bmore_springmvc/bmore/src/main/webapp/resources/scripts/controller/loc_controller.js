@@ -86,6 +86,7 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
 				calculateAcc();
 				updateChart();
 				plotLocs();
+				recenterMap();
 			},
 			function(errResponse) {
 				console.error('Error fetching CustomLocations');
@@ -204,6 +205,8 @@ angular.module('locApp').controller('LocController', ['$scope', 'LocService', fu
     		        }
 	    	      }
 	    	  }).addTo(map);
+			var popupText = "<b>" + l.name + "</b><br>" + l.address + "<br>Accessibility: " + l.accessibility ;
+			locLeafletObjs[l.id].bindPopup(popupText);
 		});
 	}
 	

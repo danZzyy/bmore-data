@@ -47,6 +47,41 @@ header{
 .bike {
   height: 40px;
 }
+.dmnd{
+	height: 20px;
+}
+.legendTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.spacing{
+  width: 80px;
+}
+#recenterBtn{
+  margin-left: 50px;
+}
+.accLegend{
+	font-size: .7em;
+	padding: 5px;
+}
+#legYes{
+	background-color: green;
+	color: white;
+}
+#legSom{
+	background-color: yellow;
+}
+#legNo{
+	background-color: red;
+	color: white;
+}
+
+#formBtns{
+	margin-top: 20px;
+	margin-left: 80px;
+}
 #title {
   font-size: 3em;
 }

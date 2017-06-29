@@ -20,6 +20,56 @@
               	<tr>
               		<td>
               			<div id="map"></div>
+              			<table class="legendTable">
+				         <tr>
+				           <td>
+				             <div>
+				               <span><svg height="30" width="40">
+				                 <line x1="10" y1="25" x2="35" y2="25" style="stroke:#0065ff;stroke-width:3" />
+				               </svg></span>
+				               <span>Bike Lane </span>
+				             </div>
+				            </td>
+				            <td>
+				             <div class="spacing"></div>
+				           </td>
+				           <td>
+				             <div>
+				               <img class="dmnd" src="<c:url value="../resources/img/dmnd.png"/>" alt="">
+				               <span>Custom Location</span>
+				             </div>
+				            </td>
+				            <td>
+				            	<button type="button" id="recenterBtn" class="btn btn-warning btn-sm" onclick="recenterMap()">Re-Center Map</button>
+				            </td>
+				            </tr>
+				            <tr>
+				              <td>
+				            	<div>
+				               	   <span><svg height="30" width="40">
+					                 <line x1="10" y1="25" x2="35" y2="25" style="stroke:#357254;stroke-width:3" />
+					               </svg></span>
+					               <span>Trail</span>
+					             </div>
+				            	</td>
+				            	<td>
+				             <div class="spacing"></div>
+				           	</td>
+				            	<td>
+				             	<div>
+				               <span><svg height="35" width="20">
+				                 <circle cx="10" cy="27" r="6" stroke="black" stroke-width="1" fill="white" />
+				               </svg></span>
+				               <span>Grocery Store</span>
+				             </div>
+				           </td>
+				           <td valign="bottom">
+				           		<span class="accLegend" id="legYes">Accessible</span>
+				           		<span class="accLegend" id="legSom">Somewhat Accessible</span>
+				           		<span class="accLegend" id="legNo">Not Accessible</span>
+				           </td>
+				         </tr>
+				       </table>
               		</td>
               		<td class="formcontainer" valign="top">
               			<div>
@@ -59,8 +109,8 @@
 		                      </div>
 		 					  <br>
 		                      <div class="row">
-		                          <div class="form-actions floatRight">
-		                              <input type="submit"  value="{{!ctrl.loc.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="locForm.$invalid">
+		                          <div class="form-actions floatRight" id="formBtns">
+		                              <input type="submit"  value="{{!ctrl.loc.id ? 'Add Custom Location' : 'Update Existing Location'}}" class="btn btn-primary btn-sm" ng-disabled="locForm.$invalid">
 		                              <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" >Reset Form</button>
 		                          </div>
 		                      </div>

@@ -176,7 +176,7 @@
       }
       
       function recenterMap(){
-    	  map.setView([39.30, -76.619], 13);
+    	  map.setView([39.30, -76.619], 12);
       }
       $('#coorBtn').on('click', geocodeAddress);
       $('#removePtBtn').on('click', removePoint);

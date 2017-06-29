@@ -11,7 +11,7 @@ var trailStyle = {
 };
 
 var bikeStyle = {
-    "color": "#ed1a1a",
+    "color": "#0065ff",
     "weight": 2,
     "opacity": 0.65
 };

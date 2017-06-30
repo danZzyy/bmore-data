@@ -18,5 +18,5 @@ To run this app you will need:
 `http://localhost:8080/app/loc/`
 This is the webpage of the Angular CRUD application
 
-`http://localhost:8080/app/loc/`
+`http://localhost:8080/app/`
 This is the webpage of the about page/prototype I worked on before this I redesigned the app

@@ -89,6 +89,18 @@ public class CustomLocServiceTest {
 	}
 	
 	@Test
+	public void testUpdate(){
+		populateAll();
+		customLocService.saveLoc(testLoc);
+		testLoc.setName("Different Name");
+		customLocService.updateLoc(testLoc);
+		assertEquals(customLocService.findById(testLoc.getId()).getName(), "Different Name");
+		customLocService.deleteItem(testLoc);
+		assertNull(customLocService.findById(testLoc.getId()));
+		
+	}
+	
+	@Test
 	public void testDoubleAdd(){
 		populateAll();
 		customLocService.saveLoc(testLoc);
@@ -101,5 +113,13 @@ public class CustomLocServiceTest {
 			assertNull(customLocService.findById(testLoc.getId()));
 		}
 		
+	}
+	
+	@Test(expected = javax.persistence.PersistenceException.class)
+	public void testDoubleRemove(){
+		populateAll();
+		customLocService.saveLoc(testLoc);
+		customLocService.deleteItem(testLoc);
+		customLocService.deleteItem(testLoc);
 	}
 }

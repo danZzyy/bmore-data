@@ -60,6 +60,12 @@ public class CustomLocServiceTest {
 	}
 	
 	@Test
+	public void testListAll(){
+		//assumes you have not deleted everything
+		assertFalse(customLocService.findAll().isEmpty());
+	}
+	
+	@Test
 	public void testAlreadyExists(){
 		populateAll();
 		assertNull(customLocService.findById(testLoc.getId()));
@@ -80,6 +86,20 @@ public class CustomLocServiceTest {
 		//leave out accessibility, lat, lng which all have NOT NULL constraint
 		customLocService.saveLoc(testLoc);
 		assertNull(customLocService.findById(testLoc.getId()));
+	}
+	
+	@Test
+	public void testDoubleAdd(){
+		populateAll();
+		customLocService.saveLoc(testLoc);
+		assertNotNull(customLocService.findById(testLoc.getId()));
+		try{
+			customLocService.saveLoc(testLoc);
+		}catch(javax.persistence.PersistenceException e){
+			//use of try catch instead of 'expected' annotation so that test item can be removed from db
+			customLocService.deleteItem(testLoc);
+			assertNull(customLocService.findById(testLoc.getId()));
+		}
 		
 	}
 }

@@ -20,6 +20,8 @@
     		    accessToken: 'pk.eyJ1IjoiZHphZG9yb3oiLCJhIjoiY2lxbGUwcDAxMDAxbWZwbmhkdXJhdW52NCJ9.0yepqDp3o0FdJ0t2CLcQlw'
     	  }).addTo(map);
     	  
+    	  map.invalidateSize();
+    	  
       }
       
       // load Bmore data into map
